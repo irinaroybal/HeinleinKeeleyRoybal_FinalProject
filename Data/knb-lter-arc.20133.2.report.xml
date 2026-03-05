@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qr:qualityReport
+  xmlns="eml://ecoinformatics.org/qualityReport"
+  xmlns:qr="eml://ecoinformatics.org/qualityReport"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="eml://ecoinformatics.org/qualityReport https://raw.githubusercontent.com/PASTAplus/PASTA/master/DataPackageManager/WebRoot/xml/qualityReportSchema.xsd"
+  >
+  <creationDate>2022-03-03T19:17:52</creationDate>
+  <packageId>knb-lter-arc.20133.2</packageId>
+  <includeSystem>lter</includeSystem>
+  <includeSystem>knb</includeSystem>
+  <datasetReport>
+    <qualityCheck qualityType="metadata" system="lter" statusType="error" >
+      <identifier>packageIdPattern</identifier>
+      <name>packageId pattern matches "scope.identifier.revision"</name>
+      <description>Check against LTER requirements for scope.identifier.revision</description>
+      <expected>'scope.n.m', where 'n' and 'm' are integers and 'scope' is one of an allowed set of values</expected>
+      <found>knb-lter-arc.20133.2</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="error" >
+      <identifier>emlVersion</identifier>
+      <name>EML version 2.1.0 or beyond</name>
+      <description>Check the EML document declaration for version 2.1.0 or higher</description>
+      <expected>eml://ecoinformatics.org/eml-2.1.0 or higher</expected>
+      <found>https://eml.ecoinformatics.org/eml-2.2.0</found>
+      <status>valid</status>
+      <explanation>Validity of this quality report is dependent on this check being valid.</explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="error" >
+      <identifier>schemaValid</identifier>
+      <name>Document is schema-valid EML</name>
+      <description>Check document schema validity</description>
+      <expected>schema-valid</expected>
+      <found>Document validated for namespace: 'https://eml.ecoinformatics.org/eml-2.2.0'</found>
+      <status>valid</status>
+      <explanation>Validity of this quality report is dependent on this check being valid.</explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="error" >
+      <identifier>parserValid</identifier>
+      <name>Document is EML parser-valid</name>
+      <description>Check document using the EML IDs and references parser</description>
+      <expected>Validates with the EML IDs and references parser</expected>
+      <found>EML IDs and references parser succeeded</found>
+      <status>valid</status>
+      <explanation>Validity of this quality report is dependent on this check being valid.</explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="error" >
+      <identifier>schemaValidDereferenced</identifier>
+      <name>Dereferenced document is schema-valid EML</name>
+      <description>References are dereferenced, and the resulting file validated</description>
+      <expected>schema-valid</expected>
+      <found>Dereferenced document validated for namespace: 'https://eml.ecoinformatics.org/eml-2.2.0'</found>
+      <status>valid</status>
+      <explanation>Validity of this quality report is dependent on this check being valid.</explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="warn" >
+      <identifier>keywordPresent</identifier>
+      <name>keyword element is present</name>
+      <description>Checks to see if at least one keyword is present</description>
+      <expected>Presence of one or more keyword elements</expected>
+      <found>24 'keyword' element(s) found</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="warn" >
+      <identifier>methodsElementPresent</identifier>
+      <name>A 'methods' element is present</name>
+      <description>All datasets should contain a 'methods' element, at a minimum a link to a separate methods doc.</description>
+      <expected>presence of 'methods' at one or more xpaths.</expected>
+      <found>1 'methods' element(s) found</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference>EML Best Practices, p. 28</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="warn" >
+      <identifier>coveragePresent</identifier>
+      <name>coverage element is present</name>
+      <description>At least one coverage element should be present in a dataset.</description>
+      <expected>At least one of geographicCoverage, taxonomicCoverage, or temporalCoverage is present in the EML.</expected>
+      <found>1 'coverage' element(s) found</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="info" >
+      <identifier>geographicCoveragePresent</identifier>
+      <name>geographicCoverage is present</name>
+      <description>Check that geographicCoverage exists in EML at the dataset level, or at least one entity's level, or at least one attribute's level.</description>
+      <expected>geographicCoverage at least at the dataset level.</expected>
+      <found>12 'geographicCoverage' element(s) found</found>
+      <status>info</status>
+      <explanation>Many but not all datasets are appropriate to have spatial coverage.</explanation>
+      <suggestion>If sampling EML is used within methods, does that obviate geographicCoverage? Or should those sites be repeated or referenced?</suggestion>
+      <reference>EML Best Practices v.2, p. 22-23. "One geographicCoverage element should be included, whose boundingCoordinates describe the extent of the data....Additional geographicCoverage elements may be entered at the dataset level if there are significant distances between study sites and it would be confusing if they were grouped into one bounding box." 6 decimal places.</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="info" >
+      <identifier>taxonomicCoveragePresent</identifier>
+      <name>taxonomicCoverage is present</name>
+      <description>Check that taxonomicCoverage exists in EML at the dataset level, or at least one entity's level, or at least one attribute's level.</description>
+      <expected>taxonomicCoverage at least at the dataset level.</expected>
+      <found>0 'taxonomicCoverage' element(s) found</found>
+      <status>info</status>
+      <explanation>Only when taxa are pertinent to the dataset will they have taxonomicCoverage.</explanation>
+      <suggestion>Could search title, abstract, keywords for any taxonomic name (huge). Could search keywordType="taxonomic".</suggestion>
+      <reference>EML Best Practices v.2, p. 25</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="info" >
+      <identifier>temporalCoveragePresent</identifier>
+      <name>temporalCoverage is present</name>
+      <description>Check that temporalCoverage exists in EML at the dataset level, or at least one entity's level, or at least one attribute's level.</description>
+      <expected>temporalCoverage at least at the dataset level.</expected>
+      <found>1 'temporalCoverage' element(s) found</found>
+      <status>info</status>
+      <explanation>LTER wants to search datasets by time; the best place to search is the dataset level temporal coverage.</explanation>
+      <suggestion>Most datasets have a temporal range.</suggestion>
+      <reference>EML Best Practices v.2, p. 24</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="error" >
+      <identifier>pastaDoiAbsent</identifier>
+      <name>An alternateIdentifier with a DOI system attribute that looks like it is generated by PASTA should not be present</name>
+      <description>Reject the data package if it contains an alternateIdentifier DOI that looks like PASTA generated it.</description>
+      <expected>No PASTA DOIs are expected to be found in the uploaded data package</expected>
+      <found>No PASTA DOI alternateIdentifier elements found</found>
+      <status>valid</status>
+      <explanation>PASTA DOI values might appear in an uploaded data package (by various mechanisms). PASTA will assign a DOI after the upload has completed successfully, so an initial one should not be there.</explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="warn" >
+      <identifier>titleLength</identifier>
+      <name>Dataset title length is at 5 least words.</name>
+      <description>If the title is shorter than 5 words, it might be insufficient. Title word count between 7 and 20 including prepositions and numbers.</description>
+      <expected>Between 7 and 20 words</expected>
+      <found>20 words found.</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference>EML Best Practices, v.2, p. 13</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="warn" >
+      <identifier>fundingPresence</identifier>
+      <name>check to see if funding element is present</name>
+      <description>Checks to see if the funding element is included.</description>
+      <expected>the funding element is expected to be included</expected>
+      <found>NSF 1651722</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="warn" >
+      <identifier>datasetAbstractLength</identifier>
+      <name>Dataset abstract element is a minimum of 20 words</name>
+      <description>Check the length of a dataset abstract and warn if less than 20 words.</description>
+      <expected>An abstract is 20 words or more.</expected>
+      <found>217 words found.</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference>EML Best Practices</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="error" >
+      <identifier>duplicateEntityName</identifier>
+      <name>There are no duplicate entity names</name>
+      <description>Checks that content is not duplicated by other entityName elements in the document</description>
+      <expected>entityName is not a duplicate within the document</expected>
+      <found>No duplicates found</found>
+      <status>valid</status>
+      <explanation>Data Manager requires a non-empty, non-duplicate entityName value for every entity</explanation>
+      <suggestion>Declare a non-empty entityName and ensure that there are no duplicate entityName values in the document</suggestion>
+      <reference></reference>
+    </qualityCheck>
+  </datasetReport>
+  <entityReport>
+    <entityName>2020MELMultisiteClimate_v2_csv</entityName>
+    <qualityCheck qualityType="metadata" system="knb" statusType="warn" >
+      <identifier>entityNameLength</identifier>
+      <name>Length of entityName is not excessive (less than 100 char)</name>
+      <description>length of entity name is less than 100 characters</description>
+      <expected>entityName value is 100 characters or less</expected>
+      <found>30</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="warn" >
+      <identifier>entityDescriptionPresent</identifier>
+      <name>An entity description is present</name>
+      <description>Check for presence of an entity description.</description>
+      <expected>EML Best practices pp. 32-33, "...should have enough information for a user..."</expected>
+      <found>true</found>
+      <status>valid</status>
+      <explanation>With entityName sometimes serving as a file name rather than a title, it is important to be very descriptive here.</explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="info" >
+      <identifier>numHeaderLinesPresent</identifier>
+      <name>'numHeaderLines' element is present</name>
+      <description>Check for presence of the 'numHeaderLines' element.</description>
+      <expected>Document contains 'numHeaderLines' element.</expected>
+      <found>'numHeaderLines' element: 1</found>
+      <status>info</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="info" >
+      <identifier>numFooterLinesPresent</identifier>
+      <name>'numFooterLines' element is present</name>
+      <description>Check for presence of the 'numFooterLines' element.</description>
+      <expected>Document contains 'numFooterLines' element.</expected>
+      <found>No 'numFooterLines' element found</found>
+      <status>info</status>
+      <explanation>If data file contains footer lines, 'numFooterLines' must be specified.</explanation>
+      <suggestion>Add 'numFooterLines' element if needed.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="error" >
+      <identifier>fieldDelimiterValid</identifier>
+      <name>Field delimiter is a single character</name>
+      <description>Field delimiters should be one character only</description>
+      <expected>A single character is expected</expected>
+      <found>,</found>
+      <status>valid</status>
+      <explanation>A valid fieldDelimiter value was found</explanation>
+      <suggestion></suggestion>
+      <reference>http://knb.ecoinformatics.org/software/eml/eml-2.1.0/eml-physical.html#fieldDelimiter</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="warn" >
+      <identifier>recordDelimiterPresent</identifier>
+      <name>Record delimiter is present</name>
+      <description>Check presence of record delimiter. Check that the record delimiter is one of the suggested values.</description>
+      <expected>A record delimiter from a list of suggested values: \n, \r, \r\n, #x0A, #x0D, #x0D#x0A</expected>
+      <found>\n</found>
+      <status>valid</status>
+      <explanation>A valid recordDelimiter value was found</explanation>
+      <suggestion></suggestion>
+      <reference>http://knb.ecoinformatics.org/software/eml/eml-2.1.0/eml-physical.html#recordDelimiter</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="warn" >
+      <identifier>numberOfRecordsPresence</identifier>
+      <name>Is the numberOfRecords element present?</name>
+      <description>Warn the user if the numberOfRecords check is not present</description>
+      <expected>A number of records element is expected for this entity</expected>
+      <found>numberOfRecords element found</found>
+      <status>valid</status>
+      <explanation>This is a valuable check that we have the correct table.</explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="warn" >
+      <identifier>entitySizePresence</identifier>
+      <name>Check for presence of an entity size element</name>
+      <description>Look for entity size element as a prep for checking congruence, and if not present, generate a warn. Note that to be most useful (i.e, to check congruence), entity size should contain the most precise measure of size, which is "byte" (the default unit); however, the presence or name of the entity size unit is NOT checked.</description>
+      <expected>Entity size is present. If unit="byte" or unit is omitted (default = byte), then congruence can be checked.</expected>
+      <found>Found entity size element with value of 290479 and size unit specified as 'bytes'. Please note that a size element specified with a unit other than 'byte' will not be tested for congruence.</found>
+      <status>valid</status>
+      <explanation>Examining the entity size is prep for checking congruence. Including the element is best practice, and if not present, a warn is generated. To be most useful, entity size should contain the most precise measure of size, which is "byte" (the default unit).</explanation>
+      <suggestion>Include an entity size in bytes</suggestion>
+      <reference> Example success: knb-lter-sbc.3.12. Example of size in units other than byte: knb-lter-mcr.6.56.</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="warn" >
+      <identifier>integrityChecksumPresence</identifier>
+      <name>A physical/authentication element is present and specifies a method attribute with a value of MD5 or SHA-1</name>
+      <description>Check for presence of a physical/authentication element containing a checksum or hash value for an integrity check (e.g. MD5, SHA-1). Warn if an entity does not have a physical/authentication element, or if none of the physical/authentication elements specify a method attribute with a value of MD5 or SHA-1.</description>
+      <expected>At least one physical/authentication element with a method attribute specifying MD5 or SHA-1 and containing a checksum or hash value that can be used to perform an integrity check on the data.</expected>
+      <found>true</found>
+      <status>valid</status>
+      <explanation>PASTA will use this value to check the integrity of the data it downloads from your site. In addition, PASTA is planning to compare the contributor-supplied checksum/hash value documented 
+      in the physical/authentication element to the checksum/hash value of this entity downloaded from previous revisions of this data package. If PASTA already has a copy of this entity, it will be able 
+      to avoid an unnecessary download of the entity from your site, resulting in faster processing of the new data package revision when you update it in PASTA.</explanation>
+      <suggestion>Add a physical/authentication element and store the entity checksum or hash value in it using a method such as MD5 or SHA-1.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="warn" >
+      <identifier>attributeNamesUnique</identifier>
+      <name>Attribute names are unique</name>
+      <description>Checks if attributeName values are unique in the table. Not required by EML.</description>
+      <expected>Unique attribute names.</expected>
+      <found>true</found>
+      <status>valid</status>
+      <explanation>A good table does not have duplicate column names.</explanation>
+      <suggestion></suggestion>
+      <reference>EML Best Practices</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="data" system="knb" statusType="info" >
+      <identifier>displayDownloadData</identifier>
+      <name>Display downloaded data</name>
+      <description>Display the first kilobyte of data that is downloaded</description>
+      <expected>Up to one kilobyte of data should be displayed</expected>
+      <found><![CDATA[
+"Time","D_TotalShortWave","D_TemperatureMin","D_TemperatureMax","D_CarbonDioxide","D_NH4Input","D_NO3Input","D_PO4Input","D_Precipitation","D_DoCInput","D_DoNInput","D_ApatiteInput","D_RunIn","D_DoCInRunIn","D_DoNInRunIn","D_NH4InRunIn","D_NO3InRunIn","D_PO4InRunIn","D_ObservedSeries1","D_ObservedSeries2","biomassC","biomassN","biomassP","effortC","effortN","effortP","subEffortCO2","subEffortLight","subEffortH2O","subEffortNH4","subEffortNO3","subEffortDoN","subEffortNfix","PhaseISOMC","PhaseISOMN","PhaseISOMP","WoodyDebrisC","WoodyDebrisN","WoodyDebrisP","PhaseIISOMC","PhaseIISOMN","PhaseIISOMP","NH4","NO3","PO4","PPrimaryMin","PNon_Occluded","POccluded","water","snowPack","SoilHeat","canopyFraction","AveRequirementC","AveRequirementN","AveRequirementP","AveAcquisitionC","AveAcquisitionN","AveAcquisitionP","DegreeDayPositive","DegreeDayNegative","CumGPP","CumNPP","CumNEP","CumUdoC","CumLitC","CumLcWC","CumTotalLitterC","CumTotalLitterN","CumTotalLitterP","CumTotMicrobResp","CumNetNMin","CumNetPMin","CumTotal]]></found>
+      <status>info</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="error" >
+      <identifier>urlReturnsData</identifier>
+      <name>URL returns data</name>
+      <description>Checks whether a URL returns data. Unless the URL is specified to be function="information", the URL should return the resource for download.</description>
+      <expected>A data entity that matches the metadata</expected>
+      <found>true</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference>http://knb.ecoinformatics.org/software/eml/eml-2.1.0/eml-resource.html#UrlType</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="error" >
+      <identifier>onlineURLs</identifier>
+      <name>Online URLs are live</name>
+      <description>Check that online URLs return something</description>
+      <expected>true</expected>
+      <found>true</found>
+      <status>valid</status>
+      <explanation>Succeeded in accessing URL: <![CDATA[https://portal.edirepository.org/nis/data/ARC-upload-2022-03-03-1646359950826/2020MELMultisiteClimate_v2.csv]]></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="lter" statusType="error" >
+      <identifier>integrityChecksum</identifier>
+      <name>Compare the metadata checksum for an entity to the checksum of the downloaded entity</name>
+      <description>Two possible responses: valid if checksums match; error if checksums do not match.</description>
+      <expected>30b4b82193686b7faf07f28241e71816</expected>
+      <found>30b4b82193686b7faf07f28241e71816</found>
+      <status>valid</status>
+      <explanation>Matching checksums will ensure data integrity during upload to the repository.</explanation>
+      <suggestion>If the found integrity hash value does not match the expected integrity hash value, there may have been a loss of integrity in the data download. Check that the hash method and hash value documented in the metadata are the correct values.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="error" >
+      <identifier>entitySizeCongruence</identifier>
+      <name>Check that the entity size in the Level 0 metadata matches the one PASTA+ generates.</name>
+      <description>Compare raw file size of file to [entity]/physical/size element in metadata. Return error if not matching.</description>
+      <expected>290479</expected>
+      <found>290479</found>
+      <status>valid</status>
+      <explanation>Examining the entity size is a method for checking that this is the correct entity.</explanation>
+      <suggestion>Check the entity size.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="error" >
+      <identifier>databaseTableCreated</identifier>
+      <name>Database table created</name>
+      <description>Status of creating a database table</description>
+      <expected>A database table is expected to be generated from the EML attributes.</expected>
+      <found>A database table was generated from the attributes description</found>
+      <status>valid</status>
+      <explanation><![CDATA[CREATE TABLE _2020MELMultisiteClimate_v2_csv("Time" FLOAT,"D_TotalShortWave" FLOAT,"D_TemperatureMin" FLOAT,"D_TemperatureMax" FLOAT,"D_CarbonDioxide" FLOAT,"D_NH4Input" FLOAT,"D_NO3Input" FLOAT,"D_PO4Input" FLOAT,"D_Precipitation" FLOAT,"D_DoCInput" FLOAT,"D_DoNInput" FLOAT,"D_ApatiteInput" FLOAT,"D_RunIn" FLOAT,"D_DoCInRunIn" FLOAT,"D_DoNInRunIn" FLOAT,"D_NH4InRunIn" FLOAT,"D_NO3InRunIn" FLOAT,"D_PO4InRunIn" FLOAT,"D_ObservedSeries1" FLOAT,"D_ObservedSeries2" FLOAT,"biomassC" FLOAT,"biomassN" FLOAT,"biomassP" FLOAT,"effortC" FLOAT,"effortN" FLOAT,"effortP" FLOAT,"subEffortCO2" FLOAT,"subEffortLight" FLOAT,"subEffortH2O" FLOAT,"subEffortNH4" FLOAT,"subEffortNO3" FLOAT,"subEffortDoN" FLOAT,"subEffortNfix" FLOAT,"PhaseISOMC" FLOAT,"PhaseISOMN" FLOAT,"PhaseISOMP" FLOAT,"WoodyDebrisC" FLOAT,"WoodyDebrisN" FLOAT,"WoodyDebrisP" FLOAT,"PhaseIISOMC" FLOAT,"PhaseIISOMN" FLOAT,"PhaseIISOMP" FLOAT,"NH4" FLOAT,"NO3" FLOAT,"PO4" FLOAT,"PPrimaryMin" FLOAT,"PNon_Occluded" FLOAT,"POccluded" FLOAT,"water" FLOAT,"snowPack" FLOAT,"SoilHeat" FLOAT,"canopyFraction" FLOAT,"AveRequirementC" FLOAT,"AveRequirementN" FLOAT,"AveRequirementP" FLOAT,"AveAcquisitionC" FLOAT,"AveAcquisitionN" FLOAT,"AveAcquisitionP" FLOAT,"DegreeDayPositive" FLOAT,"DegreeDayNegative" FLOAT,"CumGPP" FLOAT,"CumNPP" FLOAT,"CumNEP" FLOAT,"CumUdoC" FLOAT,"CumLitC" FLOAT,"CumLcWC" FLOAT,"CumTotalLitterC" FLOAT,"CumTotalLitterN" FLOAT,"CumTotalLitterP" FLOAT,"CumTotMicrobResp" FLOAT,"CumNetNMin" FLOAT,"CumNetPMin" FLOAT,"CumTotalNUptake" FLOAT,"CumUNH4" FLOAT,"CumUNO3" FLOAT,"CumUdoN" FLOAT,"CumNFixation" FLOAT,"CumLitN" FLOAT,"CumLcWN" FLOAT,"CumUPO4" FLOAT,"CumLitP" FLOAT,"CumLcWP" FLOAT,"CumLcWCa" FLOAT,"CumRCm" FLOAT,"CumTiiC" FLOAT,"CumLcWNa" FLOAT,"CumUNH4m" FLOAT,"CumUNO3m" FLOAT,"CumRNm" FLOAT,"CumTiiN" FLOAT,"CumNonsymNfix" FLOAT,"CumLcWPa" FLOAT,"CumUPO4m" FLOAT,"CumRPm" FLOAT,"CumTiiP" FLOAT,"CumMiiC" FLOAT,"CumMiiN" FLOAT,"CumMiiP" FLOAT,"CumINH4" FLOAT,"CumLNH4" FLOAT,"CumNitrification" FLOAT,"CumINO3" FLOAT,"CumLNO3" FLOAT,"CumDNtr" FLOAT,"CumPaw" FLOAT,"CumPnow" FLOAT,"CumIPO4" FLOAT,"CumLPO4" FLOAT,"CumPO4P" FLOAT,"CumIPa" FLOAT,"CumPocclw" FLOAT,"CumPnos" FLOAT,"CumIdoC" FLOAT,"CumIdoN" FLOAT,"CumLdoC" FLOAT,"CumLdoN" FLOAT,"CumUW" FLOAT,"CumRunoff" FLOAT,"CumPrecipitation" FLOAT,"CumInterception" FLOAT,"CumRainfall" FLOAT,"CumSnowfall" FLOAT,"CumSnowmelt" FLOAT,"CumRunIn" FLOAT,"CumRinDoC" FLOAT,"CumRinDoN" FLOAT,"CumRinNH4" FLOAT,"CumRinNO3" FLOAT,"CumRinPO4" FLOAT,"CumOverlandFlow" FLOAT,"CumOverlandDoC" FLOAT,"CumOverlandDoN" FLOAT,"CumOverlandNH4" FLOAT,"CumOverlandNO3" FLOAT,"CumOverlandPO4" FLOAT,"LAIPeakSeason" FLOAT,"CumBCFireLoss" FLOAT,"CumBNFireLoss" FLOAT,"CumBPFireLoss" FLOAT,"CumWCFireLoss" FLOAT,"CumWNFireLoss" FLOAT,"CumWPFireLoss" FLOAT,"CumDCFireLoss" FLOAT,"CumDNFireLoss" FLOAT,"CumDPFireLoss" FLOAT,"CumTotCVolatilizedFire" FLOAT,"CumTotNVolatilizedFire" FLOAT,"CumTotPVolatilizedFire" FLOAT,"CumCFineLitToDebris" FLOAT,"CumNFineLitToDebris" FLOAT,"CumPFineLitToDebris" FLOAT,"BCPeakSeason" FLOAT,"TemperatureAve" FLOAT,"Biomass" FLOAT,"BiomassActive" FLOAT,"BiomassLeaf" FLOAT,"BiomassRoot" FLOAT,"BiomassWoody" FLOAT,"leafArea" FLOAT,"LeafAreaMax" FLOAT,"canopyFractionGrowth" FLOAT,"canopyGrowthWaterResp" FLOAT,"canopyFractionSenescence" FLOAT,"canopyLitterWaterResp" FLOAT,"VPD" FLOAT,"soilPotential" FLOAT,"PBalApatiteWeathering" FLOAT,"PBalPO4Precipitation" FLOAT,"PBalNon_occlWeathrng" FLOAT,"PBalOccldWeathering" FLOAT,"PBalNon_occldStablz" FLOAT,"canopyCondSoilLimited" FLOAT,"CBalPs_LightLimit" FLOAT,"CBalPs_CO2Limit" FLOAT,"CBalPs_WaterLimit" FLOAT,"CBalPhotosynthesis" FLOAT,"WBalWaterUptake" FLOAT,"potentialET" FLOAT,"aqueousNH4" FLOAT,"NBalNH4Uptake" FLOAT,"aqueousNO3" FLOAT,"NBalNO3Uptake" FLOAT,"PlantAvailDoC" FLOAT,"doCUptake" FLOAT,"NBalDoNUptake" FLOAT,"NBalNFixation" FLOAT,"NBalTotalNUptake" FLOAT,"aqueousPO4" FLOAT,"PBalPO4Uptake" FLOAT,"actualNConc_" FLOAT,"optimumNConc_" FLOAT,"actualPConc_" FLOAT,"optimumPConc_" FLOAT,"CBalLitterC" FLOAT,"NBalLitterN" FLOAT,"PBalLitterP" FLOAT,"CBalFine_DebrisLitter" FLOAT,"NBalFine_DebrisLitter" FLOAT,"PBalFine_DebrisLitter" FLOAT,"CCoarseLitter" FLOAT,"NCoarseLitter" FLOAT,"PCoarseLitter" FLOAT,"CCWDActivation" FLOAT,"NCWDActivation" FLOAT,"PCWDActivation" FLOAT,"maintCReq" FLOAT,"CBalTotalPlantResp" FLOAT,"N_useEff" FLOAT,"P_useEff" FLOAT,"H2O_useEff" FLOAT,"allocatableEffort" FLOAT,"growthCReq" FLOAT,"growthNReq" FLOAT,"growthPReq" FLOAT,"marginalYieldNH4" FLOAT,"marginalYieldNO3" FLOAT,"marginalYieldDoN" FLOAT,"marginalYieldNfix" FLOAT,"marginalYieldCO2" FLOAT,"marginalYieldLight" FLOAT,"marginalYieldH2O" FLOAT,"averageCYield" FLOAT,"averageNYield" FLOAT,"TotalCReq" FLOAT,"TotalNReq" FLOAT,"TotalPReq" FLOAT,"MeanReq_uptake" FLOAT,"mesophyllCO2" FLOAT,"TotalEffort" FLOAT,"TotalRootEffort" FLOAT,"TotalLeafEffort" FLOAT,"TotalSoilC" FLOAT,"TotalSoilN" FLOAT,"TotalSoilP" FLOAT,"CBalNPP" FLOAT,"WBalRunoff" FLOAT,"NH4Leach" FLOAT,"NO3Leach" FLOAT,"CBalDoCLeach" FLOAT,"NBalDoNLeach" FLOAT,"NBalTotalNLeach" FLOAT,"PBalPO4Leach" FLOAT,"thetaN" FLOAT,"thetaP" FLOAT,"NBalMicrNH4Uptake" FLOAT,"NBalMicrNO3Uptake" FLOAT,"NBalTotMicrNUptake" FLOAT,"PBalMicrPUptake" FLOAT,"totalCConsump" FLOAT,"totalNConsump" FLOAT,"totalPConsump" FLOAT,"CEfficiency" FLOAT,"NEfficiency" FLOAT,"PEfficiency" FLOAT,"CBalMicrobialResp" FLOAT,"NBalGrossNMin" FLOAT,"PBalGrossPMin" FLOAT,"CBalPhaseIITran" FLOAT,"NBalPhaseIITran" FLOAT,"PBalPhaseIITran" FLOAT,"CBalPhaseIIMin" FLOAT,"NBalPhaseIIMin" FLOAT,"PBalPhaseIIMin" FLOAT,"NBalNonSymNFix" FLOAT,"NBalNitrification" FLOAT,"deltaEffortTotal" FLOAT,"NBalTotalNdep" FLOAT,"NBalNetNMin" FLOAT,"PBalNetPMin" FLOAT,"CBalNEP" FLOAT,"NBalNetEcos" FLOAT,"PBalNetEcos" FLOAT,"CBalNetEcos" FLOAT,"WBalNetEcos" FLOAT,"CumNetEcoCBal" FLOAT,"CumNetEcoNBal" FLOAT,"CumNetEcoPBal" FLOAT,"CumNetEcoWBal" FLOAT,"biomassWFullCanopy" FLOAT,"CanopyLitter" FLOAT,"SnowMelt" FLOAT,"DayOfYear" FLOAT,"DayLength" FLOAT,"declination" FLOAT,"Interception" FLOAT,"requirementRatioCA" FLOAT,"requirementRatioN" FLOAT,"requirementRatioPO4" FLOAT,"dUCDvCO2" FLOAT,"dUCDvW" FLOAT,"dUCDvI" FLOAT,"dUCDvNH4" FLOAT,"dUCDvNO3" FLOAT,"dUCDvdoN" FLOAT,"dUCDvNfix" FLOAT,"dUCDVC" FLOAT,"kickstarter_CEffort" FLOAT,"kickstarter_NEffort" FLOAT,"kickstarter_PEffort" FLOAT,"kickstarter_CO2Subeffort" FLOAT,"kickstarter_WSubeffort" FLOAT,"kickstarter_ISubeffort" FLOAT,"kickstarter_NH4Subeffort" FLOAT,"kickstarter_NO3Subeffort" FLOAT,"kickstarter_NfixSubeffort" FLOAT,"kickstarter_DoNSubeffort" FLOAT,"rootingDepth_Actual" FLOAT,"nearRootDepletionFactor" FLOAT,"betweenRootHalfDistance" FLOAT,"RootLength" FLOAT,"Denitrification" FLOAT,"DepthOfPeat" FLOAT,"SoilVolumePerGC" FLOAT,"UnfrozenSoilFraction" FLOAT,"SoilTemperature" FLOAT,"UpwardCond" FLOAT,"UpwardThawCond" FLOAT,"UpwardFrozenCond" FLOAT,"FrozenHeatCap" FLOAT,"ThawedHeatCap" FLOAT,"Snowfall" FLOAT,"Rainfall" FLOAT,"VolumetricWaterContent" FLOAT,"OverlandFlow_Runin" FLOAT,"OverlandDoC_Runin" FLOAT,"OverlandDoN_Runin" FLOAT,"OverlandNH4_Runin" FLOAT,"OverlandNO3_Runin" FLOAT,"OverlandPO4_Runin" FLOAT,"OverlandFlow_Infil" FLOAT,"DepthOfThaw" FLOAT,"Calibration" FLOAT,"SoilTempWaterResponse" FLOAT,"YearsSinceSimStart" FLOAT,"CO2Deviation" FLOAT,"TempSummerDev" FLOAT,"TempWinterDev" FLOAT,"PptSimulated" FLOAT,"PptSummerDev" FLOAT,"PptWinterDev" FLOAT,"ProjectedCO2" FLOAT,"ProjectedTmax" FLOAT,"ProjectedTmin" FLOAT,"ProjectedPrecip" FLOAT,"AveGrowSeasonTemp" FLOAT,"BiomassCFireLoss" FLOAT,"BiomassNFireLoss" FLOAT,"BiomassPFireLoss" FLOAT,"DebrisCFireLoss" FLOAT,"DebrisNFireLoss" FLOAT,"DebrisPFireLoss" FLOAT,"PhaseICFireLoss" FLOAT,"PhaseINFireLoss" FLOAT,"PhaseIPFireLoss" FLOAT,"FireNO3Deposition" FLOAT,"FirePO4Deposition" FLOAT,"FireNVolatilized" FLOAT,"FirePVolatilized" FLOAT,"StandingDeadLAIEquiv" FLOAT,"ProjectedRunin" FLOAT);]]></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="warn" >
+      <identifier>examineRecordDelimiter</identifier>
+      <name>Data are examined and possible record delimiters are displayed</name>
+      <description>If no record delimiter was specified, we assume that \r\n is the delimiter. Search the first row for other record delimiters and see if other delimiters are found.</description>
+      <expected>No other potential record delimiters expected in the first row.</expected>
+      <found>No other potential record delimiters were detected. A valid record delimiter was previously detected</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference>http://knb.ecoinformatics.org/software/eml/eml-2.1.0/eml-physical.html#recordDelimiter</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="data" system="knb" statusType="info" >
+      <identifier>displayFirstInsertRow</identifier>
+      <name>Display first insert row</name>
+      <description>Display the first row of data values to be inserted into the database table</description>
+      <expected>The first row of data values should be displayed</expected>
+      <found><![CDATA[365, 0, -33.6, -23.7, 400, 0, 0, 0, 0, 0, 0, 6.58E-06, 0, 0, 0, 0, 0, 0, 0, 0, 644.7764812, 12.9652297, 1.266317504, 0.412797285, 0.2936016, 0.293601115, 0.113303602, 0.483289756, 0.403406642, 0.884226846, 0.046285776, 0.069487378, 0, 3387.044516, 81.00000176, 8.142584057, 390.0000015, 7.24177644, 0.812374614, 8709.543112, 313.2627179, 31.32627179, 0.028448355, 0.005758218, 0.030113291, 9.48, 6.000000061, 0, 83.2415204, 65.84740429, 361.6738231, 0.54833294, 0.801952014, 0.013563709, 0.001131287, 0.580874062, 0.008987617, 0.000751731, 766.2999985, -1626.599999, 408.6001514, 204.3001321, 1.872031617, 4.415574449, 187.815583, 20.90000204, 208.715585, 3.354399288, 0.282899992, 202.4281005, 2.133227752, 0.282900063, 3.354399, 1.604000247, 0.557000254, 1.1933985, 0, 2.966314309, 0.388084979, 0.282900065, 0.239365041, 0.043534951, 20.90000049, 159.7636994, 42.6644021, 0.38808495, 6.957993133, 1.683197658, 9.239875791, 1.534542787, 0.090699993, 0.043534948, 0.864119913, 0.993565701, 0.153454279, 42.6644011, 1.534542751, 0.153454275, 0.0147, 0.001827304, 2.225297887, 0.0203, 0.005399984, 0, 0.002399999, 0.0015, 0.002, 0.004399997, 0.0015, 0.002399999, 0, 0, 0.231807694, 0.018846155, 2.103724512, 0.137318832, 98.30001903, 196.5939906, 327.66, 32.76599037, 157.95, 169.71, 154.3596534, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.36333317, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 759.4001779, -28.65, 1357.424171, 801.1504316, 108.186645, 603.8494178, 645.3881226, 0.466609, 0.850959273, 0, 1, 5.90E-13, 0, 5.45127E-05, -0.006232289, 6.58E-06, 3.63E-06, 4.11E-06, 0, 0, 0, 0, 0, 0, 0, 0, -999, 0.458900224, 0.003092003, 1.125261882, 0.000989626, 44.29090987, 0.010618618, 0.002869897, 0, 0.006951525, 0.583857471, 0.000560331, 0.009551347, 0.018775006, 0.000932883, 0.001790417, 0.364793189, 0.006094502, 0.000509793, 0, 0, 0, 0.057748222, 0.001072307, 0.00012029, 0.036789907, 0.000683139, 7.66338E-05, 0.111480423, 0.122168328, 58.95809973, 670.6117972, 0, 0.999813112, 0.388077638, 0.01004809, 0.000872894, 0.011644424, 4.76E-07, 3.33E-07, 0, 0, 0, 0, 0, 0.010296357, 0.510245966, 0.01004809, 0.000872894, 0.737307971, -999, 1, 0.753727882, 0.246272118, 12486.58763, 401.5044962, 40.28123047, -0.122168328, 0, 0, 0, 0, 0, 0, 0, 46.33780005, 463.3780005, 0.009647526, 0.002073519, 0.011721045, 0.001304164, 0.419660743, 0.017700697, 0.002024612, 0.306283033, 0.261182612, 0.228345665, 0.291125778, 0.013077583, 0.001562301, 0.075631296, 0.002720288, 0.000272029, 0.075135184, 0.002702444, 0.000270244, 0.000161577, 0.003060304, -8.40E-19, 0, 0.004058981, 0.000528381, -0.48842929, 0.000161577, 6.58E-06, -0.48842929, 0, 0.000114799, 2.75E-08, 2.13E-09, -2.57E-08, 1446.53854, 0.053972232, 0, 365, 0, -0.40268093, 0, 1.300982314, 1.398152309, 1.394977817, 0, 0, 0, 0.003418821, 0.021245469, 0.041167171, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.35, -0.121333303, 0.001920922, 30192.47089, 0, 0.209999998, 1.73603E-05, 0, -12.18193495, 0.015689801, 0.003386605, 0.015689801, 0.931103088, 1.216026236, 0, 0, 0.237832915, 0, 0, 0, 0, 0, 0, 0, 0, -999, 0.425474864, 1, 0, 0, 0, -999, 0, 0, 400, -23.7, -33.6, 0, 8.070689655, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]></found>
+      <status>info</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="error" >
+      <identifier>onlineURLs</identifier>
+      <name>Online URLs are live</name>
+      <description>Check that online URLs return something</description>
+      <expected>true</expected>
+      <found>true</found>
+      <status>valid</status>
+      <explanation>Succeeded in accessing URL: <![CDATA[file:///pasta/data1/knb-lter-arc.20133.2/2d9acf3b44e7802c74458e6061639ddc]]></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="error" >
+      <identifier>tooFewFields</identifier>
+      <name>Data does not have fewer fields than metadata attributes</name>
+      <description>Compare number of fields specified in metadata to number of fields found in a data record</description>
+      <expected></expected>
+      <found>No errors detected</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference>http://knb.ecoinformatics.org/software/eml/eml-2.1.0/eml-physical.html#dataFormat</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="error" >
+      <identifier>tooManyFields</identifier>
+      <name>Data does not have more fields than metadata attributes</name>
+      <description>Compare number of fields specified in metadata to number of fields found in a data record</description>
+      <expected></expected>
+      <found>No errors detected</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference>http://knb.ecoinformatics.org/software/eml/eml-2.1.0/eml-physical.html#dataFormat</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="warn" >
+      <identifier>dataLoadStatus</identifier>
+      <name>Data can be loaded into the database</name>
+      <description>Status of loading the data table into a database</description>
+      <expected>No errors expected during data loading or data loading was not attempted for this data entity</expected>
+      <found>The data table loaded successfully into a database</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="warn" >
+      <identifier>numberOfRecords</identifier>
+      <name>Number of records in metadata matches number of rows loaded</name>
+      <description>Compare number of records specified in metadata to number of records found in data</description>
+      <expected>100</expected>
+      <found>100</found>
+      <status>valid</status>
+      <explanation>The expected number of records (100) was found in the data table.</explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="lter" statusType="info" >
+      <identifier>headerRowAttributeNames</identifier>
+      <name>Header row is displayed alongside attribute names</name>
+      <description>Compare the content of the data header row to the content of EML attribute names.</description>
+      <expected>No expectation, information only</expected>
+      <found><![CDATA[*** HEADER ROWS ***
+"Time","D_TotalShortWave","D_TemperatureMin","D_TemperatureMax","D_CarbonDioxide","D_NH4Input","D_NO3Input","D_PO4Input","D_Precipitation","D_DoCInput","D_DoNInput","D_ApatiteInput","D_RunIn","D_DoCInRunIn","D_DoNInRunIn","D_NH4InRunIn","D_NO3InRunIn","D_PO4InRunIn","D_ObservedSeries1","D_ObservedSeries2","biomassC","biomassN","biomassP","effortC","effortN","effortP","subEffortCO2","subEffortLight","subEffortH2O","subEffortNH4","subEffortNO3","subEffortDoN","subEffortNfix","PhaseISOMC","PhaseISOMN","PhaseISOMP","WoodyDebrisC","WoodyDebrisN","WoodyDebrisP","PhaseIISOMC","PhaseIISOMN","PhaseIISOMP","NH4","NO3","PO4","PPrimaryMin","PNon_Occluded","POccluded","water","snowPack","SoilHeat","canopyFraction","AveRequirementC","AveRequirementN","AveRequirementP","AveAcquisitionC","AveAcquisitionN","AveAcquisitionP","DegreeDayPositive","DegreeDayNegative","CumGPP","CumNPP","CumNEP","CumUdoC","CumLitC","CumLcWC","CumTotalLitterC","CumTotalLitterN","CumTotalLitterP","CumTotMicrobResp","CumNetNMin","CumNetPMin","CumTotalNUptake","CumUNH4","CumUNO3","CumUdoN","CumNFixation","CumLitN","CumLcWN","CumUPO4","CumLitP","CumLcWP","CumLcWCa","CumRCm","CumTiiC","CumLcWNa","CumUNH4m","CumUNO3m","CumRNm","CumTiiN","CumNonsymNfix","CumLcWPa","CumUPO4m","CumRPm","CumTiiP","CumMiiC","CumMiiN","CumMiiP","CumINH4","CumLNH4","CumNitrification","CumINO3","CumLNO3","CumDNtr","CumPaw","CumPnow","CumIPO4","CumLPO4","CumPO4P","CumIPa","CumPocclw","CumPnos","CumIdoC","CumIdoN","CumLdoC","CumLdoN","CumUW","CumRunoff","CumPrecipitation","CumInterception","CumRainfall","CumSnowfall","CumSnowmelt","CumRunIn","CumRinDoC","CumRinDoN","CumRinNH4","CumRinNO3","CumRinPO4","CumOverlandFlow","CumOverlandDoC","CumOverlandDoN","CumOverlandNH4","CumOverlandNO3","CumOverlandPO4","LAIPeakSeason","CumBCFireLoss","CumBNFireLoss","CumBPFireLoss","CumWCFireLoss","CumWNFireLoss","CumWPFireLoss","CumDCFireLoss","CumDNFireLoss","CumDPFireLoss","CumTotCVolatilizedFire","CumTotNVolatilizedFire","CumTotPVolatilizedFire","CumCFineLitToDebris","CumNFineLitToDebris","CumPFineLitToDebris","BCPeakSeason","TemperatureAve","Biomass","BiomassActive","BiomassLeaf","BiomassRoot","BiomassWoody","leafArea","LeafAreaMax","canopyFractionGrowth","canopyGrowthWaterResp","canopyFractionSenescence","canopyLitterWaterResp","VPD","soilPotential","PBalApatiteWeathering","PBalPO4Precipitation","PBalNon_occlWeathrng","PBalOccldWeathering","PBalNon_occldStablz","canopyCondSoilLimited","CBalPs_LightLimit","CBalPs_CO2Limit","CBalPs_WaterLimit","CBalPhotosynthesis","WBalWaterUptake","potentialET","aqueousNH4","NBalNH4Uptake","aqueousNO3","NBalNO3Uptake","PlantAvailDoC","doCUptake","NBalDoNUptake","NBalNFixation","NBalTotalNUptake","aqueousPO4","PBalPO4Uptake","actualNConc_","optimumNConc_","actualPConc_","optimumPConc_","CBalLitterC","NBalLitterN","PBalLitterP","CBalFine_DebrisLitter","NBalFine_DebrisLitter","PBalFine_DebrisLitter","CCoarseLitter","NCoarseLitter","PCoarseLitter","CCWDActivation","NCWDActivation","PCWDActivation","maintCReq","CBalTotalPlantResp","N_useEff","P_useEff","H2O_useEff","allocatableEffort","growthCReq","growthNReq","growthPReq","marginalYieldNH4","marginalYieldNO3","marginalYieldDoN","marginalYieldNfix","marginalYieldCO2","marginalYieldLight","marginalYieldH2O","averageCYield","averageNYield","TotalCReq","TotalNReq","TotalPReq","MeanReq_uptake","mesophyllCO2","TotalEffort","TotalRootEffort","TotalLeafEffort","TotalSoilC","TotalSoilN","TotalSoilP","CBalNPP","WBalRunoff","NH4Leach","NO3Leach","CBalDoCLeach","NBalDoNLeach","NBalTotalNLeach","PBalPO4Leach","thetaN","thetaP","NBalMicrNH4Uptake","NBalMicrNO3Uptake","NBalTotMicrNUptake","PBalMicrPUptake","totalCConsump","totalNConsump","totalPConsump","CEfficiency","NEfficiency","PEfficiency","CBalMicrobialResp","NBalGrossNMin","PBalGrossPMin","CBalPhaseIITran","NBalPhaseIITran","PBalPhaseIITran","CBalPhaseIIMin","NBalPhaseIIMin","PBalPhaseIIMin","NBalNonSymNFix","NBalNitrification","deltaEffortTotal","NBalTotalNdep","NBalNetNMin","PBalNetPMin","CBalNEP","NBalNetEcos","PBalNetEcos","CBalNetEcos","WBalNetEcos","CumNetEcoCBal","CumNetEcoNBal","CumNetEcoPBal","CumNetEcoWBal","biomassWFullCanopy","CanopyLitter","SnowMelt","DayOfYear","DayLength","declination","Interception","requirementRatioCA","requirementRatioN","requirementRatioPO4","dUCDvCO2","dUCDvW","dUCDvI","dUCDvNH4","dUCDvNO3","dUCDvdoN","dUCDvNfix","dUCDVC","kickstarter_CEffort","kickstarter_NEffort","kickstarter_PEffort","kickstarter_CO2Subeffort","kickstarter_WSubeffort","kickstarter_ISubeffort","kickstarter_NH4Subeffort","kickstarter_NO3Subeffort","kickstarter_NfixSubeffort","kickstarter_DoNSubeffort","rootingDepth_Actual","nearRootDepletionFactor","betweenRootHalfDistance","RootLength","Denitrification","DepthOfPeat","SoilVolumePerGC","UnfrozenSoilFraction","SoilTemperature","UpwardCond","UpwardThawCond","UpwardFrozenCond","FrozenHeatCap","ThawedHeatCap","Snowfall","Rainfall","VolumetricWaterContent","OverlandFlow_Runin","OverlandDoC_Runin","OverlandDoN_Runin","OverlandNH4_Runin","OverlandNO3_Runin","OverlandPO4_Runin","OverlandFlow_Infil","DepthOfThaw","Calibration","SoilTempWaterResponse","YearsSinceSimStart","CO2Deviation","TempSummerDev","TempWinterDev","PptSimulated","PptSummerDev","PptWinterDev","ProjectedCO2","ProjectedTmax","ProjectedTmin","ProjectedPrecip","AveGrowSeasonTemp","BiomassCFireLoss","BiomassNFireLoss","BiomassPFireLoss","DebrisCFireLoss","DebrisNFireLoss","DebrisPFireLoss","PhaseICFireLoss","PhaseINFireLoss","PhaseIPFireLoss","FireNO3Deposition","FirePO4Deposition","FireNVolatilized","FirePVolatilized","StandingDeadLAIEquiv","ProjectedRunin"
+*** ATTRIBUTE LIST ***
+Time,D_TotalShortWave,D_TemperatureMin,D_TemperatureMax,D_CarbonDioxide,D_NH4Input,D_NO3Input,D_PO4Input,D_Precipitation,D_DoCInput,D_DoNInput,D_ApatiteInput,D_RunIn,D_DoCInRunIn,D_DoNInRunIn,D_NH4InRunIn,D_NO3InRunIn,D_PO4InRunIn,D_ObservedSeries1,D_ObservedSeries2,biomassC,biomassN,biomassP,effortC,effortN,effortP,subEffortCO2,subEffortLight,subEffortH2O,subEffortNH4,subEffortNO3,subEffortDoN,subEffortNfix,PhaseISOMC,PhaseISOMN,PhaseISOMP,WoodyDebrisC,WoodyDebrisN,WoodyDebrisP,PhaseIISOMC,PhaseIISOMN,PhaseIISOMP,NH4,NO3,PO4,PPrimaryMin,PNon_Occluded,POccluded,water,snowPack,SoilHeat,canopyFraction,AveRequirementC,AveRequirementN,AveRequirementP,AveAcquisitionC,AveAcquisitionN,AveAcquisitionP,DegreeDayPositive,DegreeDayNegative,CumGPP,CumNPP,CumNEP,CumUdoC,CumLitC,CumLcWC,CumTotalLitterC,CumTotalLitterN,CumTotalLitterP,CumTotMicrobResp,CumNetNMin,CumNetPMin,CumTotalNUptake,CumUNH4,CumUNO3,CumUdoN,CumNFixation,CumLitN,CumLcWN,CumUPO4,CumLitP,CumLcWP,CumLcWCa,CumRCm,CumTiiC,CumLcWNa,CumUNH4m,CumUNO3m,CumRNm,CumTiiN,CumNonsymNfix,CumLcWPa,CumUPO4m,CumRPm,CumTiiP,CumMiiC,CumMiiN,CumMiiP,CumINH4,CumLNH4,CumNitrification,CumINO3,CumLNO3,CumDNtr,CumPaw,CumPnow,CumIPO4,CumLPO4,CumPO4P,CumIPa,CumPocclw,CumPnos,CumIdoC,CumIdoN,CumLdoC,CumLdoN,CumUW,CumRunoff,CumPrecipitation,CumInterception,CumRainfall,CumSnowfall,CumSnowmelt,CumRunIn,CumRinDoC,CumRinDoN,CumRinNH4,CumRinNO3,CumRinPO4,CumOverlandFlow,CumOverlandDoC,CumOverlandDoN,CumOverlandNH4,CumOverlandNO3,CumOverlandPO4,LAIPeakSeason,CumBCFireLoss,CumBNFireLoss,CumBPFireLoss,CumWCFireLoss,CumWNFireLoss,CumWPFireLoss,CumDCFireLoss,CumDNFireLoss,CumDPFireLoss,CumTotCVolatilizedFire,CumTotNVolatilizedFire,CumTotPVolatilizedFire,CumCFineLitToDebris,CumNFineLitToDebris,CumPFineLitToDebris,BCPeakSeason,TemperatureAve,Biomass,BiomassActive,BiomassLeaf,BiomassRoot,BiomassWoody,leafArea,LeafAreaMax,canopyFractionGrowth,canopyGrowthWaterResp,canopyFractionSenescence,canopyLitterWaterResp,VPD,soilPotential,PBalApatiteWeathering,PBalPO4Precipitation,PBalNon_occlWeathrng,PBalOccldWeathering,PBalNon_occldStablz,canopyCondSoilLimited,CBalPs_LightLimit,CBalPs_CO2Limit,CBalPs_WaterLimit,CBalPhotosynthesis,WBalWaterUptake,potentialET,aqueousNH4,NBalNH4Uptake,aqueousNO3,NBalNO3Uptake,PlantAvailDoC,doCUptake,NBalDoNUptake,NBalNFixation,NBalTotalNUptake,aqueousPO4,PBalPO4Uptake,actualNConc_,optimumNConc_,actualPConc_,optimumPConc_,CBalLitterC,NBalLitterN,PBalLitterP,CBalFine_DebrisLitter,NBalFine_DebrisLitter,PBalFine_DebrisLitter,CCoarseLitter,NCoarseLitter,PCoarseLitter,CCWDActivation,NCWDActivation,PCWDActivation,maintCReq,CBalTotalPlantResp,N_useEff,P_useEff,H2O_useEff,allocatableEffort,growthCReq,growthNReq,growthPReq,marginalYieldNH4,marginalYieldNO3,marginalYieldDoN,marginalYieldNfix,marginalYieldCO2,marginalYieldLight,marginalYieldH2O,averageCYield,averageNYield,TotalCReq,TotalNReq,TotalPReq,MeanReq_uptake,mesophyllCO2,TotalEffort,TotalRootEffort,TotalLeafEffort,TotalSoilC,TotalSoilN,TotalSoilP,CBalNPP,WBalRunoff,NH4Leach,NO3Leach,CBalDoCLeach,NBalDoNLeach,NBalTotalNLeach,PBalPO4Leach,thetaN,thetaP,NBalMicrNH4Uptake,NBalMicrNO3Uptake,NBalTotMicrNUptake,PBalMicrPUptake,totalCConsump,totalNConsump,totalPConsump,CEfficiency,NEfficiency,PEfficiency,CBalMicrobialResp,NBalGrossNMin,PBalGrossPMin,CBalPhaseIITran,NBalPhaseIITran,PBalPhaseIITran,CBalPhaseIIMin,NBalPhaseIIMin,PBalPhaseIIMin,NBalNonSymNFix,NBalNitrification,deltaEffortTotal,NBalTotalNdep,NBalNetNMin,PBalNetPMin,CBalNEP,NBalNetEcos,PBalNetEcos,CBalNetEcos,WBalNetEcos,CumNetEcoCBal,CumNetEcoNBal,CumNetEcoPBal,CumNetEcoWBal,biomassWFullCanopy,CanopyLitter,SnowMelt,DayOfYear,DayLength,declination,Interception,requirementRatioCA,requirementRatioN,requirementRatioPO4,dUCDvCO2,dUCDvW,dUCDvI,dUCDvNH4,dUCDvNO3,dUCDvdoN,dUCDvNfix,dUCDVC,kickstarter_CEffort,kickstarter_NEffort,kickstarter_PEffort,kickstarter_CO2Subeffort,kickstarter_WSubeffort,kickstarter_ISubeffort,kickstarter_NH4Subeffort,kickstarter_NO3Subeffort,kickstarter_NfixSubeffort,kickstarter_DoNSubeffort,rootingDepth_Actual,nearRootDepletionFactor,betweenRootHalfDistance,RootLength,Denitrification,DepthOfPeat,SoilVolumePerGC,UnfrozenSoilFraction,SoilTemperature,UpwardCond,UpwardThawCond,UpwardFrozenCond,FrozenHeatCap,ThawedHeatCap,Snowfall,Rainfall,VolumetricWaterContent,OverlandFlow_Runin,OverlandDoC_Runin,OverlandDoN_Runin,OverlandNH4_Runin,OverlandNO3_Runin,OverlandPO4_Runin,OverlandFlow_Infil,DepthOfThaw,Calibration,SoilTempWaterResponse,YearsSinceSimStart,CO2Deviation,TempSummerDev,TempWinterDev,PptSimulated,PptSummerDev,PptWinterDev,ProjectedCO2,ProjectedTmax,ProjectedTmin,ProjectedPrecip,AveGrowSeasonTemp,BiomassCFireLoss,BiomassNFireLoss,BiomassPFireLoss,DebrisCFireLoss,DebrisNFireLoss,DebrisPFireLoss,PhaseICFireLoss,PhaseINFireLoss,PhaseIPFireLoss,FireNO3Deposition,FirePO4Deposition,FireNVolatilized,FirePVolatilized,StandingDeadLAIEquiv,ProjectedRunin]]></found>
+      <status>info</status>
+      <explanation></explanation>
+      <suggestion>Customer should evaluate the findings</suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="lter" statusType="warn" >
+      <identifier>dateFormatMatches</identifier>
+      <name>Date format in metadata matches data</name>
+      <description>dateTime/formatString in attribute metadata is from the preferred list, and the data matches. A non-match generates only a warn.</description>
+      <expected>Format string is preferred, and all data values match the format string</expected>
+      <found>Data values matched the specified formatString.</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion>Dates should be consistently formatted and match the formatString in metadata.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+  </entityReport>
+  <entityReport>
+    <entityName>2020MELMultisiteClimate_v2_xlsx</entityName>
+    <qualityCheck qualityType="metadata" system="knb" statusType="warn" >
+      <identifier>entityNameLength</identifier>
+      <name>Length of entityName is not excessive (less than 100 char)</name>
+      <description>length of entity name is less than 100 characters</description>
+      <expected>entityName value is 100 characters or less</expected>
+      <found>31</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="warn" >
+      <identifier>entityDescriptionPresent</identifier>
+      <name>An entity description is present</name>
+      <description>Check for presence of an entity description.</description>
+      <expected>EML Best practices pp. 32-33, "...should have enough information for a user..."</expected>
+      <found>true</found>
+      <status>valid</status>
+      <explanation>With entityName sometimes serving as a file name rather than a title, it is important to be very descriptive here.</explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="info" >
+      <identifier>numHeaderLinesPresent</identifier>
+      <name>'numHeaderLines' element is present</name>
+      <description>Check for presence of the 'numHeaderLines' element.</description>
+      <expected>Document contains 'numHeaderLines' element.</expected>
+      <found>No 'numHeaderLines' element found</found>
+      <status>info</status>
+      <explanation>If data file contains header lines, 'numHeaderLines' must be specified.</explanation>
+      <suggestion>Add 'numHeaderLines' element if needed.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="info" >
+      <identifier>numFooterLinesPresent</identifier>
+      <name>'numFooterLines' element is present</name>
+      <description>Check for presence of the 'numFooterLines' element.</description>
+      <expected>Document contains 'numFooterLines' element.</expected>
+      <found>No 'numFooterLines' element found</found>
+      <status>info</status>
+      <explanation>If data file contains footer lines, 'numFooterLines' must be specified.</explanation>
+      <suggestion>Add 'numFooterLines' element if needed.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="error" >
+      <identifier>fieldDelimiterValid</identifier>
+      <name>Field delimiter is a single character</name>
+      <description>Field delimiters should be one character only</description>
+      <expected>A single character is expected</expected>
+      <found>null</found>
+      <status>info</status>
+      <explanation>A fieldDelimiter value is not checked for binary entities or entities with an externally defined format</explanation>
+      <suggestion></suggestion>
+      <reference>http://knb.ecoinformatics.org/software/eml/eml-2.1.0/eml-physical.html#fieldDelimiter</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="warn" >
+      <identifier>recordDelimiterPresent</identifier>
+      <name>Record delimiter is present</name>
+      <description>Check presence of record delimiter. Check that the record delimiter is one of the suggested values.</description>
+      <expected>A record delimiter from a list of suggested values: \n, \r, \r\n, #x0A, #x0D, #x0D#x0A</expected>
+      <found>null</found>
+      <status>info</status>
+      <explanation>A recordDelimiter value is not checked for binary entities or entities with an externally defined format</explanation>
+      <suggestion></suggestion>
+      <reference>http://knb.ecoinformatics.org/software/eml/eml-2.1.0/eml-physical.html#recordDelimiter</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="warn" >
+      <identifier>entitySizePresence</identifier>
+      <name>Check for presence of an entity size element</name>
+      <description>Look for entity size element as a prep for checking congruence, and if not present, generate a warn. Note that to be most useful (i.e, to check congruence), entity size should contain the most precise measure of size, which is "byte" (the default unit); however, the presence or name of the entity size unit is NOT checked.</description>
+      <expected>Entity size is present. If unit="byte" or unit is omitted (default = byte), then congruence can be checked.</expected>
+      <found>Found entity size element with value of 527637 and size unit specified as 'bytes'. Please note that a size element specified with a unit other than 'byte' will not be tested for congruence.</found>
+      <status>valid</status>
+      <explanation>Examining the entity size is prep for checking congruence. Including the element is best practice, and if not present, a warn is generated. To be most useful, entity size should contain the most precise measure of size, which is "byte" (the default unit).</explanation>
+      <suggestion>Include an entity size in bytes</suggestion>
+      <reference> Example success: knb-lter-sbc.3.12. Example of size in units other than byte: knb-lter-mcr.6.56.</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="warn" >
+      <identifier>integrityChecksumPresence</identifier>
+      <name>A physical/authentication element is present and specifies a method attribute with a value of MD5 or SHA-1</name>
+      <description>Check for presence of a physical/authentication element containing a checksum or hash value for an integrity check (e.g. MD5, SHA-1). Warn if an entity does not have a physical/authentication element, or if none of the physical/authentication elements specify a method attribute with a value of MD5 or SHA-1.</description>
+      <expected>At least one physical/authentication element with a method attribute specifying MD5 or SHA-1 and containing a checksum or hash value that can be used to perform an integrity check on the data.</expected>
+      <found>true</found>
+      <status>valid</status>
+      <explanation>PASTA will use this value to check the integrity of the data it downloads from your site. In addition, PASTA is planning to compare the contributor-supplied checksum/hash value documented 
+      in the physical/authentication element to the checksum/hash value of this entity downloaded from previous revisions of this data package. If PASTA already has a copy of this entity, it will be able 
+      to avoid an unnecessary download of the entity from your site, resulting in faster processing of the new data package revision when you update it in PASTA.</explanation>
+      <suggestion>Add a physical/authentication element and store the entity checksum or hash value in it using a method such as MD5 or SHA-1.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="data" system="knb" statusType="info" >
+      <identifier>displayDownloadData</identifier>
+      <name>Display downloaded data</name>
+      <description>Display the first kilobyte of data that is downloaded</description>
+      <expected>Up to one kilobyte of data should be displayed</expected>
+      <found>Cannot display NON-PLAIN TEXT DATA</found>
+      <status>info</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="error" >
+      <identifier>urlReturnsData</identifier>
+      <name>URL returns data</name>
+      <description>Checks whether a URL returns data. Unless the URL is specified to be function="information", the URL should return the resource for download.</description>
+      <expected>A data entity that matches the metadata</expected>
+      <found>true</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference>http://knb.ecoinformatics.org/software/eml/eml-2.1.0/eml-resource.html#UrlType</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="error" >
+      <identifier>onlineURLs</identifier>
+      <name>Online URLs are live</name>
+      <description>Check that online URLs return something</description>
+      <expected>true</expected>
+      <found>true</found>
+      <status>valid</status>
+      <explanation>Succeeded in accessing URL: <![CDATA[https://portal.edirepository.org/nis/data/ARC-upload-2022-03-03-1646359950826/2020MELMultisiteClimate_v2.xlsx]]></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="lter" statusType="error" >
+      <identifier>integrityChecksum</identifier>
+      <name>Compare the metadata checksum for an entity to the checksum of the downloaded entity</name>
+      <description>Two possible responses: valid if checksums match; error if checksums do not match.</description>
+      <expected>e57ab9d08be00e77428151907995c17a</expected>
+      <found>e57ab9d08be00e77428151907995c17a</found>
+      <status>valid</status>
+      <explanation>Matching checksums will ensure data integrity during upload to the repository.</explanation>
+      <suggestion>If the found integrity hash value does not match the expected integrity hash value, there may have been a loss of integrity in the data download. Check that the hash method and hash value documented in the metadata are the correct values.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="error" >
+      <identifier>entitySizeCongruence</identifier>
+      <name>Check that the entity size in the Level 0 metadata matches the one PASTA+ generates.</name>
+      <description>Compare raw file size of file to [entity]/physical/size element in metadata. Return error if not matching.</description>
+      <expected>527637</expected>
+      <found>527637</found>
+      <status>valid</status>
+      <explanation>Examining the entity size is a method for checking that this is the correct entity.</explanation>
+      <suggestion>Check the entity size.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+  </entityReport>
+  <entityReport>
+    <entityName>2020MELMultisiteClimate_zip</entityName>
+    <qualityCheck qualityType="metadata" system="knb" statusType="warn" >
+      <identifier>entityNameLength</identifier>
+      <name>Length of entityName is not excessive (less than 100 char)</name>
+      <description>length of entity name is less than 100 characters</description>
+      <expected>entityName value is 100 characters or less</expected>
+      <found>27</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="warn" >
+      <identifier>entityDescriptionPresent</identifier>
+      <name>An entity description is present</name>
+      <description>Check for presence of an entity description.</description>
+      <expected>EML Best practices pp. 32-33, "...should have enough information for a user..."</expected>
+      <found>true</found>
+      <status>valid</status>
+      <explanation>With entityName sometimes serving as a file name rather than a title, it is important to be very descriptive here.</explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="info" >
+      <identifier>numHeaderLinesPresent</identifier>
+      <name>'numHeaderLines' element is present</name>
+      <description>Check for presence of the 'numHeaderLines' element.</description>
+      <expected>Document contains 'numHeaderLines' element.</expected>
+      <found>No 'numHeaderLines' element found</found>
+      <status>info</status>
+      <explanation>If data file contains header lines, 'numHeaderLines' must be specified.</explanation>
+      <suggestion>Add 'numHeaderLines' element if needed.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="info" >
+      <identifier>numFooterLinesPresent</identifier>
+      <name>'numFooterLines' element is present</name>
+      <description>Check for presence of the 'numFooterLines' element.</description>
+      <expected>Document contains 'numFooterLines' element.</expected>
+      <found>No 'numFooterLines' element found</found>
+      <status>info</status>
+      <explanation>If data file contains footer lines, 'numFooterLines' must be specified.</explanation>
+      <suggestion>Add 'numFooterLines' element if needed.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="error" >
+      <identifier>fieldDelimiterValid</identifier>
+      <name>Field delimiter is a single character</name>
+      <description>Field delimiters should be one character only</description>
+      <expected>A single character is expected</expected>
+      <found>null</found>
+      <status>info</status>
+      <explanation>A fieldDelimiter value is not checked for binary entities or entities with an externally defined format</explanation>
+      <suggestion></suggestion>
+      <reference>http://knb.ecoinformatics.org/software/eml/eml-2.1.0/eml-physical.html#fieldDelimiter</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="warn" >
+      <identifier>recordDelimiterPresent</identifier>
+      <name>Record delimiter is present</name>
+      <description>Check presence of record delimiter. Check that the record delimiter is one of the suggested values.</description>
+      <expected>A record delimiter from a list of suggested values: \n, \r, \r\n, #x0A, #x0D, #x0D#x0A</expected>
+      <found>null</found>
+      <status>info</status>
+      <explanation>A recordDelimiter value is not checked for binary entities or entities with an externally defined format</explanation>
+      <suggestion></suggestion>
+      <reference>http://knb.ecoinformatics.org/software/eml/eml-2.1.0/eml-physical.html#recordDelimiter</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="knb" statusType="warn" >
+      <identifier>entitySizePresence</identifier>
+      <name>Check for presence of an entity size element</name>
+      <description>Look for entity size element as a prep for checking congruence, and if not present, generate a warn. Note that to be most useful (i.e, to check congruence), entity size should contain the most precise measure of size, which is "byte" (the default unit); however, the presence or name of the entity size unit is NOT checked.</description>
+      <expected>Entity size is present. If unit="byte" or unit is omitted (default = byte), then congruence can be checked.</expected>
+      <found>Found entity size element with value of 45651513 and size unit specified as 'bytes'. Please note that a size element specified with a unit other than 'byte' will not be tested for congruence.</found>
+      <status>valid</status>
+      <explanation>Examining the entity size is prep for checking congruence. Including the element is best practice, and if not present, a warn is generated. To be most useful, entity size should contain the most precise measure of size, which is "byte" (the default unit).</explanation>
+      <suggestion>Include an entity size in bytes</suggestion>
+      <reference> Example success: knb-lter-sbc.3.12. Example of size in units other than byte: knb-lter-mcr.6.56.</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="metadata" system="lter" statusType="warn" >
+      <identifier>integrityChecksumPresence</identifier>
+      <name>A physical/authentication element is present and specifies a method attribute with a value of MD5 or SHA-1</name>
+      <description>Check for presence of a physical/authentication element containing a checksum or hash value for an integrity check (e.g. MD5, SHA-1). Warn if an entity does not have a physical/authentication element, or if none of the physical/authentication elements specify a method attribute with a value of MD5 or SHA-1.</description>
+      <expected>At least one physical/authentication element with a method attribute specifying MD5 or SHA-1 and containing a checksum or hash value that can be used to perform an integrity check on the data.</expected>
+      <found>true</found>
+      <status>valid</status>
+      <explanation>PASTA will use this value to check the integrity of the data it downloads from your site. In addition, PASTA is planning to compare the contributor-supplied checksum/hash value documented 
+      in the physical/authentication element to the checksum/hash value of this entity downloaded from previous revisions of this data package. If PASTA already has a copy of this entity, it will be able 
+      to avoid an unnecessary download of the entity from your site, resulting in faster processing of the new data package revision when you update it in PASTA.</explanation>
+      <suggestion>Add a physical/authentication element and store the entity checksum or hash value in it using a method such as MD5 or SHA-1.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="data" system="knb" statusType="info" >
+      <identifier>displayDownloadData</identifier>
+      <name>Display downloaded data</name>
+      <description>Display the first kilobyte of data that is downloaded</description>
+      <expected>Up to one kilobyte of data should be displayed</expected>
+      <found>Cannot display NON-PLAIN TEXT DATA</found>
+      <status>info</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="error" >
+      <identifier>urlReturnsData</identifier>
+      <name>URL returns data</name>
+      <description>Checks whether a URL returns data. Unless the URL is specified to be function="information", the URL should return the resource for download.</description>
+      <expected>A data entity that matches the metadata</expected>
+      <found>true</found>
+      <status>valid</status>
+      <explanation></explanation>
+      <suggestion></suggestion>
+      <reference>http://knb.ecoinformatics.org/software/eml/eml-2.1.0/eml-resource.html#UrlType</reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="error" >
+      <identifier>onlineURLs</identifier>
+      <name>Online URLs are live</name>
+      <description>Check that online URLs return something</description>
+      <expected>true</expected>
+      <found>true</found>
+      <status>valid</status>
+      <explanation>Succeeded in accessing URL: <![CDATA[https://portal.edirepository.org/nis/data/ARC-upload-2022-03-03-1646359950826/2020MELMultisiteClimate.zip]]></explanation>
+      <suggestion></suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="lter" statusType="error" >
+      <identifier>integrityChecksum</identifier>
+      <name>Compare the metadata checksum for an entity to the checksum of the downloaded entity</name>
+      <description>Two possible responses: valid if checksums match; error if checksums do not match.</description>
+      <expected>73950148d0725464af1e60c6f0b76d19</expected>
+      <found>73950148d0725464af1e60c6f0b76d19</found>
+      <status>valid</status>
+      <explanation>Matching checksums will ensure data integrity during upload to the repository.</explanation>
+      <suggestion>If the found integrity hash value does not match the expected integrity hash value, there may have been a loss of integrity in the data download. Check that the hash method and hash value documented in the metadata are the correct values.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+    <qualityCheck qualityType="congruency" system="knb" statusType="error" >
+      <identifier>entitySizeCongruence</identifier>
+      <name>Check that the entity size in the Level 0 metadata matches the one PASTA+ generates.</name>
+      <description>Compare raw file size of file to [entity]/physical/size element in metadata. Return error if not matching.</description>
+      <expected>45651513</expected>
+      <found>45651513</found>
+      <status>valid</status>
+      <explanation>Examining the entity size is a method for checking that this is the correct entity.</explanation>
+      <suggestion>Check the entity size.</suggestion>
+      <reference></reference>
+    </qualityCheck>
+  </entityReport>
+</qr:qualityReport>
