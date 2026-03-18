@@ -33,6 +33,12 @@ HBF_T_Jul31 <- read.csv(here("HBF/HBF.T.Jul31.out"), stringsAsFactors = TRUE) # 
 ```
 
 ```{r}
+# combine into one data frame
+HBF_alltreat <- 
+```
+
+
+```{r}
 # attempt at a figure
 ggplot(HBF_Ppti_Jul31, aes(x=Time, y=biomassC)) +
   geom_line()
