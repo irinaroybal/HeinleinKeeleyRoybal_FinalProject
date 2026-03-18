@@ -1,7 +1,0 @@
-Manifest file for knb-lter-arc.20133.2.zip created on Wed Feb 25 22:25:03 UTC 2026
-2020MELMultisiteClimate_v2.csv (290479 bytes)
-2020MELMultisiteClimate_v2.xlsx (527637 bytes)
-2020MELMultisiteClimate.zip (45651513 bytes)
-knb-lter-arc.20133.2.xml (319515 bytes)
-knb-lter-arc.20133.2.txt (153617 bytes)
-knb-lter-arc.20133.2.report.xml (72651 bytes)
