@@ -1,0 +1,428 @@
+MELVI                     2.8.5                     Units                     Holdconstant              Reset                    
+biomass C                 1.17914734934775E+004     g C m-2                   False                     False                    
+biomass N                 7.91755696857670E+001     g N m-2                   False                     False                    
+biomass P                 9.46651188902009E+000     g P m-2                   False                     False                    
+effort C                  4.51663884839359E-001     effort                    False                     False                    
+effort N                  2.74168219737664E-001     effort                    False                     False                    
+effort P                  2.74167895422977E-001     effort                    False                     False                    
+sub effort CO2            1.09378002855314E-001     effort                    False                     False                    
+sub effort light          5.81495474645756E-001     effort                    False                     False                    
+sub effort H2O            3.09126522498930E-001     effort                    False                     False                    
+sub effort NH4            8.66376490376983E-001     effort                    False                     False                    
+sub effort NO3            1.33623509623017E-001     effort                    False                     False                    
+sub effort doN            0.00000000000000E+000     effort                    False                     False                    
+sub effort Nfix           0.00000000000000E+000     effort                    False                     False                    
+Phase I SOM C             4.40719954847014E+003     g C m-2                   False                     False                    
+Phase I SOM N             1.75000007438742E+002     g N m-2                   False                     False                    
+Phase I SOM P             1.75428358430427E+001     g P m-2                   False                     False                    
+Woody debris C            1.31299968766665E+003     g C m-2                   False                     False                    
+Woody debris N            5.44748566485586E+000     g N m-2                   False                     False                    
+Woody debris P            5.80484071983721E-001     g P m-2                   False                     False                    
+Phase II SOM C            1.13327993140567E+004     g C m-2                   False                     False                    
+Phase II SOM N            6.29060506162285E+002     g N m-2                   False                     False                    
+Phase II SOM P            6.29060506162285E+001     g P m-2                   False                     False                    
+NH4                       2.39120524851911E-001     g N m-2                   False                     False                    
+NO3                       7.86406068672296E-003     g N m-2                   False                     False                    
+PO4                       3.46048207295312E-002     g P m-2                   False                     False                    
+P Primary min             1.70600000000000E+001     g P m-2                   False                     False                    
+P non-Occluded            2.10000025168963E+001     g P m-2                   False                     False                    
+P Occluded                0.00000000000000E+000     g P m-2                   False                     False                    
+water                     7.18509847595684E+001     mm H2O                    False                     False                    
+snow pack                 3.29333878320596E+001     mm H2O                    False                     False                    
+Soil Heat                 4.01051838196052E+002     arbitrary                 False                     False                    
+canopy fraction           1.87000000000000E-001     unitless                  False                     False                    
+Ave requirement C         2.37300808275727E+000     none                      False                     False                    
+Ave requirement N         5.96516931826663E-002     none                      False                     False                    
+Ave requirement P         4.09956517398468E-003     none                      False                     False                    
+Ave Acquisition C         1.53091629515503E+000     none                      False                     False                    
+Ave Acquisition N         3.54096993858870E-002     none                      False                     False                    
+Ave Acquisition P         2.54611415710230E-003     none                      False                     False                    
+Degree day positive       0.00000000000000E+000     oC day                    False                     True                     
+Degree day negative       0.00000000000000E+000     oC day                    False                     True                     
+Cum GPP                   0.00000000000000E+000     g C m-2                   False                     True                     
+Cum NPP                   0.00000000000000E+000     g C m-2                   False                     True                     
+Cum NEP                   0.00000000000000E+000     g C m-2                   False                     True                     
+Cum UdoC                  0.00000000000000E+000     g C m-2                   False                     True                     
+Cum LitC                  0.00000000000000E+000     g C m-2                   False                     True                     
+Cum LcWC                  0.00000000000000E+000     g C m-2                   False                     True                     
+Cum Total Litter C        0.00000000000000E+000     g C m-2                   False                     True                     
+Cum Total Litter N        0.00000000000000E+000     g N m-2                   False                     True                     
+Cum Total Litter P        0.00000000000000E+000     g P m-2                   False                     True                     
+Cum Tot microb resp       0.00000000000000E+000     g C m-2                   False                     True                     
+Cum net N min             0.00000000000000E+000     g N m-2                   False                     True                     
+Cum net P min             0.00000000000000E+000     g P m-2                   False                     True                     
+Cum Total N uptake        0.00000000000000E+000     g N m-2                   False                     True                     
+Cum UNH4                  0.00000000000000E+000     g N m-2                   False                     True                     
+Cum UNO3                  0.00000000000000E+000     g N m-2                   False                     True                     
+Cum UdoN                  0.00000000000000E+000     g N m-2                   False                     True                     
+Cum N fixation            0.00000000000000E+000     g N m-2                   False                     True                     
+Cum LitN                  0.00000000000000E+000     g N m-2                   False                     True                     
+Cum LcWN                  0.00000000000000E+000     g N m-2                   False                     True                     
+Cum UPO4                  0.00000000000000E+000     g P m-2                   False                     True                     
+Cum LitP                  0.00000000000000E+000     g P m-2                   False                     True                     
+Cum LcWP                  0.00000000000000E+000     g P m-2                   False                     True                     
+Cum LcWCa                 0.00000000000000E+000     g C m-2                   False                     True                     
+Cum RCm                   0.00000000000000E+000     g C m-2                   False                     True                     
+Cum TiiC                  0.00000000000000E+000     g C m-2                   False                     True                     
+Cum LcWNa                 0.00000000000000E+000     g N m-2                   False                     True                     
+Cum UNH4m                 0.00000000000000E+000     g N m-2                   False                     True                     
+Cum UNO3m                 0.00000000000000E+000     g N m-2                   False                     True                     
+Cum RNm                   0.00000000000000E+000     g N m-2                   False                     True                     
+Cum TiiN                  0.00000000000000E+000     g N m-2                   False                     True                     
+Cum nonsym Nfix           0.00000000000000E+000     g N m-2                   False                     True                     
+Cum LcWPa                 0.00000000000000E+000     g P m-2                   False                     True                     
+Cum UPO4m                 0.00000000000000E+000     g P m-2                   False                     True                     
+Cum RPm                   0.00000000000000E+000     g P m-2                   False                     True                     
+Cum TiiP                  0.00000000000000E+000     g P m-2                   False                     True                     
+Cum MiiC                  0.00000000000000E+000     g Cm-2                    False                     True                     
+Cum MiiN                  0.00000000000000E+000     g N m-2                   False                     True                     
+Cum MiiP                  0.00000000000000E+000     g P m-2                   False                     True                     
+Cum INH4                  0.00000000000000E+000     g N m-2                   False                     True                     
+Cum LNH4                  0.00000000000000E+000     g N m-2                   False                     True                     
+Cum nitrification         0.00000000000000E+000     g N m-2                   False                     True                     
+Cum INO3                  0.00000000000000E+000     g N m-2                   False                     True                     
+Cum LNO3                  0.00000000000000E+000     g N m-2                   False                     True                     
+Cum DNtr                  0.00000000000000E+000     g N m-2                   False                     True                     
+Cum Paw                   0.00000000000000E+000     g P m-2                   False                     True                     
+Cum Pnow                  0.00000000000000E+000     g P m-2                   False                     True                     
+Cum IPO4                  0.00000000000000E+000     g P m-2                   False                     True                     
+Cum LPO4                  0.00000000000000E+000     g P m-2                   False                     True                     
+Cum PO4P                  0.00000000000000E+000     g P m-2                   False                     True                     
+Cum IPa                   0.00000000000000E+000     g P m-2                   False                     True                     
+Cum Pocclw                0.00000000000000E+000     g P m-2                   False                     True                     
+Cum Pnos                  0.00000000000000E+000     g P m-2                   False                     True                     
+Cum IdoC                  0.00000000000000E+000     g C m-2                   False                     True                     
+Cum IdoN                  0.00000000000000E+000     g C m-2                   False                     True                     
+Cum LdoC                  0.00000000000000E+000     g C m-2                   False                     True                     
+Cum LdoN                  0.00000000000000E+000     g N m-2                   False                     True                     
+Cum UW                    0.00000000000000E+000     mm H2O                    False                     True                     
+Cum runoff                0.00000000000000E+000     mm H2O                    False                     True                     
+Cum precipitation         0.00000000000000E+000     mm H2O                    False                     True                     
+Cum interception          0.00000000000000E+000     mm H2O                    False                     True                     
+Cum rainfall              0.00000000000000E+000     mm H2O                    False                     True                     
+Cum snowfall              0.00000000000000E+000     mm H2O                    False                     True                     
+Cum snowmelt              0.00000000000000E+000     mm H2O                    False                     True                     
+Cum run in                0.00000000000000E+000     mm H2O                    False                     True                     
+Cum Rin doC               0.00000000000000E+000     g C m-2 day-1             False                     True                     
+Cum Rin doN               0.00000000000000E+000     g N m-2 day-1             False                     True                     
+Cum Rin NH4               0.00000000000000E+000     g N m-2 day-1             False                     True                     
+Cum Rin NO3               0.00000000000000E+000     g N m-2 day-1             False                     True                     
+Cum Rin PO4               0.00000000000000E+000     g P m-2 day-1             False                     True                     
+Cum Overland flow         0.00000000000000E+000     mm H2O                    False                     True                     
+Cum Overland doC          0.00000000000000E+000     g C m-2                   False                     True                     
+Cum Overland doN          0.00000000000000E+000     g N m-2                   False                     True                     
+Cum Overland NH4          0.00000000000000E+000     g N m-2                   False                     True                     
+Cum Overland NO3          0.00000000000000E+000     g N m-2                   False                     True                     
+Cum Overland PO4          0.00000000000000E+000     g P m-2                   False                     True                     
+LAI peak season           0.00000000000000E+000     m2 m-2                    False                     True                     
+Cum BC fire loss          0.00000000000000E+000     g C m-2                   False                     True                     
+Cum BN fire loss          0.00000000000000E+000     g N m-2                   False                     True                     
+Cum BP fire loss          0.00000000000000E+000     g P m-2                   False                     True                     
+Cum WC fire loss          0.00000000000000E+000     g C m-2                   False                     True                     
+Cum WN fire loss          0.00000000000000E+000     g N m-2                   False                     True                     
+Cum WP fire loss          0.00000000000000E+000     g P m-2                   False                     True                     
+Cum DC fire loss          0.00000000000000E+000     g C m-2                   False                     True                     
+Cum DN fire loss          0.00000000000000E+000     g N m-2                   False                     True                     
+Cum DP fire loss          0.00000000000000E+000     g P m-2                   False                     True                     
+Cum TotC volatilized fire 0.00000000000000E+000     g C m-2                   False                     True                     
+Cum TotN volatilized fire 0.00000000000000E+000     g N m-2                   False                     True                     
+Cum TotP volatilized fire 0.00000000000000E+000     g P m-2                   False                     True                     
+Cum C FineLit to Debris   0.00000000000000E+000     g C m-2                   False                     True                     
+Cum N FineLit to Debris   0.00000000000000E+000     g N m-2                   False                     True                     
+Cum P FineLit to Debris   0.00000000000000E+000     g P m-2                   False                     True                     
+BC peak season            0.00000000000000E+000     g C m-2                   False                     True                     
+Allometry alpha           9.50000000000000E-001                              
+Maximum Ba                1.02700000000000E+003     g DW m-2                 
+Ba:Bt slope               9.20000000000000E-001     none                     
+leaf area per DW          1.48880000000000E-002     m2 g-1 DW                
+C:DW ratio                4.75000000000000E-001     g C g-1 DW               
+evergreen canopy fraction 1.87000000000000E-001     unitless                 
+canopy growth rate        2.80000000000000E-003     deg-1 C day-1            
+canopy growth water sens  5.00000000000000E-001     unitless                 
+wilting amplitude         1.30000000000000E+000     unitless                 
+degree day bud break      8.00000000000000E+001     deg C                    
+canopy feedback exp       1.00000000000000E-002     unitless                 
+day of year fall starts   2.60000000000000E+002     day                      
+litter temperature rate   2.00000000000000E-001     day-1                    
+litter moisture rate      1.00000000000000E-001     day-1                    
+field capacity for plants 1.50000000000000E-001     fraction of soil vol     
+field capacity for runoff 1.50000000000000E-001     fraction of soil vol     
+wilting point             5.00000000000000E-002     fraction of soil vol     
+field potential           -1.00000000000000E-002    MPa                      
+wilting potential         -1.50000000000000E+000    MPa                      
+rooting depth             4.79000000000000E-001     m                        
+soil porosity             7.08800000000000E-001     fraction of soil vol     
+bulk density              7.57000000000000E-001     Mg m-3                   
+soil drain rate           9.00000000000000E-001     day-1                    
+non-leaf sfc area         0.00000000000000E+000     m2 m-2                   
+branch exponent           4.00000000000000E-001     none                     
+Mid wood biomass          1.00000000000000E+002     g DW m-2                 
+intercept volume          6.58322581096160E-001     mm m-2                   
+NH4 sorption cap          4.02000000000000E+002     g N Mg-1 dry soil        
+NH4 affinity const        7.86000000000000E+002     umol NH4 L-1             
+NO3 sorption cap          1.00000000000000E+001     g N Mg-1 dry soil        
+NO3 affinity const        3.00000000000000E+002     umol NH4 L-1             
+PO4 sorption cap          6.20000000000000E+001     g PO4 Mg-1 dry soil      
+PO4 partition const       1.50000000000000E+002     g sorbed g-1 solution    
+depth: hydraulically acti 4.79000000000000E-001     m                        
+PaDOC C:N cutoff          5.00000000000000E+001     gC/gN                    
+Nfix critical LAI         3.00000000000000E+000     m2 m-2                   
+doN runoff par            6.98875392104005E-010     mm-1                     
+Nfix Lcrit sens           7.00000000000000E+000     none                     
+apatite weathering rate   6.90550996482184E-007     day-1                    
+PO4 precip rate           5.37402764791159E-005     day-1                    
+non-occld weath rate      6.84932358554690E-007     day-1                    
+No-occld stab rate        0.00000000000000E+000     day-1                    
+occlud weathering rate    0.00000000000000E+000     day-1                    
+Neg leaching flag         0.00000000000000E+000     none                     
+PET-root sensitivity      7.98778198893349E-004     m2 soil m-1 root         
+Ps CO2 rate constant      1.22308084057854E+001     g C effort-1 day-1       
+Ta Ps CA                  7.00000000000000E+001     oC                       
+Tb Ps CA                  4.00000000000000E+001     oC                       
+T exp a Ps CA             4.00000000000000E-002     oC-1                     
+T exp b Ps CA             2.00000000000000E-001     oC-1                     
+Ps light constant         1.83462126086781E+001     g C effort-1 day-1       
+light half sat            5.00000000000000E+000     g C MJ-1                 
+light extinct             5.00000000000000E-001     none                     
+Ppt projection exp        8.00000000000000E-002     mm-1                     
+UW Ps scaler              4.30309869656876E-004     none                     
+Q10 resp                  2.00000000000000E+000     none                     
+NH4 uptake const          1.44749277837041E-004     g N effort-1 day-1       
+NH4 half sat const        1.00000000000000E+002     umol L-1                 
+Q10 NH4 uptake            2.00000000000000E+000     none                     
+NO3 uptake const          5.96274281843807E-004     g N effort-1 day-1       
+NO3 half sat const        1.00000000000000E+002     umol L-1                 
+Q10 NO3 uptake            2.00000000000000E+000     none                     
+Soil PadoC fraction       1.00000000000000E-002     g N                      
+doC uptake const          0.00000000000000E+000     g C effort-1 day-1       
+doC half sat const        8.50000000000000E+002     umol L-1                 
+Q10 doC uptake            2.00000000000000E+000     none                     
+N fix rate const          0.00000000000000E+000     g N effort-1 day-1       
+Q10 N fix                 2.00000000000000E+000     none                     
+NH4 C cost                0.00000000000000E+000     g C g-1 N                
+NO3 C cost                2.10000000000000E+000     g C g-1 N                
+doN C cost                3.00000000000000E+000     g C g-1 N                
+N fix C cost              6.40000000000000E+000     g C g-1 N                
+PO4 uptake const          1.88831423300754E-005     g P effort-1 day-1       
+PO4 half sat const        3.00000000000000E+001     umol L-1                 
+Q10 PO4 uptake            2.00000000000000E+000     none                     
+leaf N:DW                 3.71325596785345E-002     g N g-1 DW               
+Wood N:DW                 3.81406884833697E-003     g N g-1 DW               
+root N:DW                 3.36041234511319E-002     g N g-1 DW               
+leaf litter N:DW          2.89068559029432E-002     g N g-1 DW               
+wood litter N:DW          3.56994602188068E-003     g N g-1 DW               
+root litter N:DW          5.16193907206324E-002     g N g-1 DW               
+stoichio feedback         5.00000000000000E-001     none                     
+leaf P:DW                 3.37935006081974E-003     g P g-1 DW               
+Wood P:DW                 4.41466659727195E-004     g P g-1 DW               
+root P:DW                 3.90676172297369E-003     g P g-1 DW               
+leaf litter P:DW          1.85392433257663E-003     g P g-1 DW               
+wood litter P:DW          1.21340725879667E-003     g P g-1 DW               
+root litter P:DW          2.52923180499211E-003     g P g-1 DW               
+leaf turnover evergreen   2.69065671465368E-004     day-1                    
+BW turnover               2.55190507919421E-005     day-1                    
+root turnover             8.73338912428836E-004     day-1                    
+Standing dead fine litt f 0.00000000000000E+000     fraction                 
+C:N LitCDebris            0.00000000000000E+000     g C g-1 N                
+C:P LitCDebris            0.00000000000000E+000     g C g-1 P                
+coarse woody litter       4.88489092405410E-003     day-1                    
+wood litter exp           5.00000000000000E-001     none                     
+coarse litter N:DW        1.97072072073751E-003     g N g-1 DW               
+coarse litter P:DW        2.09999999834175E-004     g P g-1 DW               
+CWD turnover              1.81650578370884E-004     day-1                    
+active resp               6.42246966912959E-003     g C g-1 N day-1          
+woody resp                6.42246966912959E-003     g C g-1 N day-1          
+sapwd:heartwd parti exp   0.00000000000000E+000     m2 g-1 DW                
+growth resp               2.80000000000000E-001     fraction                 
+acclim rate               1.00000000000000E-002     day-1                    
+requirement turnover      1.50000000000000E-002     day-1                    
+minimum effort            1.00000000000000E-003     effort                   
+C sub effort acclim rate  1.00000000000000E-004     day-1                    
+N sub effort acclim rate  1.00000000000000E-004     day-1                    
+max req to up index       1.00000000000000E+001     none                     
+C:N dom leach             1.53200000000000E+001     g C g-1 N                
+microb return C:N         1.80154360400000E+001     g C g-1 N                
+Phase II OM C:N           1.80154360400000E+001     g C g-1 N                
+NH4 up par m              8.33586485332502E-004     g N m-2 day-1            
+NH4 half sat m            5.00000000000000E+001     umol N L-1               
+NO3 up par m              1.53580758694365E-004     g N m-2 day-1            
+NO3 half sat m            5.00000000000000E+001     umol N L-1               
+C:N Plant avail dom       3.70000000000000E+000     g C g-1 N                
+Nitrifica rate            6.43684869057979E-001     g N m-2 day-1            
+Nitrifica half sat const  7.00000000000000E+001     umol N L-1               
+microb return C:P         1.80154360400000E+002     g C g-1 P                
+Phase II OM C:P           1.80154360400000E+002     g C g-1 P                
+PO4 up par m              2.00349041978233E-004     g P m-2 day-1            
+PO4 half sat m            2.00000000000000E+001     umol P L-1               
+max C eff                 6.00000000000000E-001     none                     
+N pref coef               2.13065869847431E-004     none                     
+P pref coef               1.75414907950826E-004     none                     
+metabolic const           2.48237740877405E-004     day-1                    
+Q10 microb resp           2.00000000000000E+000     none                     
+opt moisture              1.50000000000000E-001     pore fraction            
+J parameter               6.37000000000000E+000     none                     
+minimum moist             1.00000000000000E-002     pore fraction            
+Si->Sii transit. modifier 1.39561954070708E-008     none                     
+Sii min rate modifier     1.62477952293678E-005     none                     
+lichen rate const         0.00000000000000E+000     g N m-2 day-1            
+soil Nfix rate const      7.38247579567921E-009     g2 N g-2 C day-1         
+Nfix crit C:N             1.80154360400000E+001     g C g-1 N                
+short wave coef           1.00000000000000E-001     none                     
+longwave coef             2.10000000000000E+000     none                     
+latent heat of fusion H2O 3.34000000000000E-001     MJ mm-1 m-2              
+convective coef           2.00000000000000E+000     mm oC-1 day-1            
+snow crit temp            7.50000000000000E-001     oC                       
+degree day start          1.00000000000000E+000     day                      
+time offset               0.00000000000000E+000     days                     
+latitude                  4.40000000000000E+001     degrees                  
+Doy divisor               3.65000000000000E+002     days                     
+Max between root half dis 8.00000000000000E-003     none                     
+specific root length      5.00000000000000E+001     m g-1 DW                 
+root radius               5.00000000000000E-004     m                        
+diffusion NH4             8.64000000000000E-005     m2 d-1                   
+diffusion NO3             4.03000000000000E-005     m2 d-1                   
+diffusion dom             2.39000000000000E-005     m2 d-1                   
+diffusion PO4             2.39000000000000E-005     m2 d-1                   
+Dntr rate constant        1.49727837045297E+001     g N m-2 day-1            
+minimum moisture          1.50000000000000E-001     fraction soil volume     
+half sat DNtr             7.00000000000000E+001     umol L-1                 
+initial SOC               1.57399999197286E+004     g C/m2                   
+initial depth of peat     4.79000000000000E-001     m                        
+downward cond             8.00000000000000E-002     none                     
+radiation term            3.00000000000000E-002     heat m2 day MJ-1         
+cond organic soil         1.20000000000000E-002     heat oC-1                
+cond mineral soil         2.40000000000000E-002     heat oC-1                
+cond water                5.00000000000000E-003     heat oC-1                
+snow conductance          1.40000000000000E-003     heat oC-1 mm-1           
+heat cap organic soil     5.80000000000000E-001     oC heat-1                
+heat cap min soil         3.28000000000000E+000     oC heat-1                
+heat cap water            4.20000000000000E+000     oC heat-1                
+zero low limit            3.73150000000000E+002     heat                     
+zero high limit           4.00000000000000E+002     heat                     
+deep soil temperature     4.47000000000000E+000     oC                       
+snow albedo               8.00000000000000E-001     fraction                 
+distance Dop to deep soil 2.39500000000000E+000     m                        
+depth of surface soil T   2.39500000000000E-001     m                        
+Initial moisture          7.40000000000000E-001     unitless                 
+Initial soil T            2.00000000000000E+002     oC                       
+Dot par1                  -3.70000000000000E-001    oC-1                     
+Dot par2                  6.20000000000000E-001     oC-1                     
+Dot par3                  1.00000000000000E-002     m oC-1                   
+Dot par4                  2.70000000000000E-001     m                        
+Dot par5                  2.10000000000000E+000     m oC-1                   
+calibrate                 -9.99000000000000E+002    none                     
+Secondary calibrate       1.00000000000000E+000     none                     
+Peak season BC target     1.20060000000000E+004     g C m-2                  
+gI target                 0.00000000000000E+000     effort                   
+LAI peak target           6.30000000000000E+000     m2 m-2                   
+GPP target                9.46600000000000E+002     g C m-2 yr-1             
+NPP target                4.73300000000000E+002     g C m-2 yr-1             
+Fast Fine Lit C target    3.42000000000000E+002     g C m-2 yr-1             
+LcWC target               1.31300000000000E+002     g C m-2 yr-1             
+veg NH4 uptake target     1.04200000000000E+001     g N m-2 yr-1             
+veg NO3 uptake target     3.09000000000000E+000     g N m-2 yr-1             
+veg doN uptake target     0.00000000000000E+000     g N m-2 yr-1             
+Nfix target               0.00000000000000E+000     g N m-2 yr-1             
+Fast Fine Lit N target    1.29652513000000E+001     g N m-2 yr-1             
+LcWN target               5.44748696000000E-001     g N m-2 yr-1             
+veg PO4 uptake target     9.62000000000000E-001     g P m-2 yr-1             
+Fast Fine Lit P target    9.00000000000000E-001     g P m-2 yr-1             
+LcWP target               5.80484210000000E-002     g P m-2 yr-1             
+LcWCa target              1.31300000000000E+002     g C m-2 yr-1             
+LcWNa target              5.44748697603369E-001     g N m-2 yr-1             
+LcWPa target              5.80484211702831E-002     g P m-2 yr-1             
+Phase I resp tar          3.64955692200000E+002     g C m-2 yr-1             
+TiiC target               1.01227745900000E+002     g C m-2 yr-1             
+microbe NH4 uptake target 4.95414000000000E+001     g N m-2 yr-1             
+microbe NO3 uptake target 4.49860000000000E+000     g N m-2 yr-1             
+Phase I N min target      6.16563360900000E+001     g N m-2 yr-1             
+nonsymb Nfix target       1.27092270000000E-001     g N m-2 yr-1             
+microbe PO4 uptake target 5.40400000000000E+000     g P m-2 yr-1             
+Phase I P min target      5.80410549100000E+000     g P m-2 yr-1             
+MiiC target               1.01227745900000E+002     g C m-2 yr-1             
+LNH4 target               2.01023540000000E-002     g N m-2 yr-1             
+Nitrification target      7.53000000000000E+000     g N m-2 yr-1             
+LNO3 target               7.95612500000000E-003     g N m-2 yr-1             
+Denitr target             3.95000000000000E-001     g N m-2 yr-1             
+Paw target                4.30000000000000E-003     g P m-2 yr-1             
+Pnow target               5.25000000000000E-003     g P m-2 yr-1             
+LPO4 target               7.80602400000000E-003     g P m-2 yr-1             
+PO4P target               5.25000000000000E-003     g P m-2 yr-1             
+Pocclw target             0.00000000000000E+000     g P m-2 yr-1             
+Pnos target               0.00000000000000E+000     g P m-2 yr-1             
+LdoC target               8.16726185800000E+000     g C m-2 yr-1             
+UW target                 2.28000000000000E+002     mm H2O yr-1              
+Ro target                 9.98000000000000E+002     mm H2O yr-1              
+Intercept target          2.70000000000000E+002     mm H2O yr-1              
+VC target                 4.51663725000000E-001     effort                   
+VN target                 2.74168138000000E-001     effort                   
+VP target                 2.74168138000000E-001     effort                   
+vCO2 target               4.91718138000000E-001     effort                   
+vI target                 4.91718138000000E-001     effort                   
+vW target                 1.65637250000000E-002     effort                   
+vNH4 target               7.71300000000000E-001     effort                   
+vNO3 target               2.28700000000000E-001     effort                   
+vDON target               0.00000000000000E+000     effort                   
+vNfix target              0.00000000000000E+000     effort                   
+C Fine-Debris Tar         0.00000000000000E+000     g C m-2 yr-1             
+N Fine-Debris Tar         0.00000000000000E+000     g N m-2 yr-1             
+P Fine-Debris Tar         0.00000000000000E+000     g P m-2 yr-1             
+Fire BC loss tar          0.00000000000000E+000     g C m-2 yr-1             
+Fire BN loss tar          0.00000000000000E+000     g N m-2 yr-1             
+Fire BP loss tar          0.00000000000000E+000     g P m-2 yr-1             
+Fire WC loss tar          0.00000000000000E+000     g C m-2 yr-1             
+Fire WN loss tar          0.00000000000000E+000     g N m-2 yr-1             
+Fire WP loss tar          0.00000000000000E+000     g P m-2 yr-1             
+Fire DC loss tar          0.00000000000000E+000     g C m-2 yr-1             
+Fire DN loss tar          0.00000000000000E+000     g N m-2 yr-1             
+Fire DP loss tar          0.00000000000000E+000     g P m-2 yr-1             
+Fire totN volatilized tar 0.00000000000000E+000     g N m-2 yr-1             
+Fire totP volatilized tar 0.00000000000000E+000     g P m-2 yr-1             
+Flag: Project CO2?        0.00000000000000E+000     none                     
+CO2 dev slope             3.96000000000000E+000     ppm/year                 
+CO2 dev intercept         0.00000000000000E+000     ppm                      
+Flag: Project Temp?       0.00000000000000E+000     none                     
+summer T dev max          3.70000000000000E-002     deg C                    
+Flag: 3.5 deg change?     0.00000000000000E+000     none                     
+Deltaz per time           0.00000000000000E+000     m day-1                  
+Phase II C conc           2.36592901900000E+004     g C m-1                  
+Primary min P conc        3.56158663900000E+001     g P m-1                  
+Pno P conc                4.38413361200000E+001     g P m-1                  
+Poccl P conc              0.00000000000000E+000     g P m-1                  
+winter T dev slope        0.00000000000000E+000     deg C                    
+Simulate Ppt?             0.00000000000000E+000     none                     
+DOY Sum Ppt begin         0.00000000000000E+000     day                      
+DOY Sum Ppt end           0.00000000000000E+000     day                      
+Frac Dry Summer days      0.00000000000000E+000     fraction                 
+Summer Ppt intensity      0.00000000000000E+000     mm-1 H2O                 
+Frac Dry Winter days      0.00000000000000E+000     fraction                 
+Winter Ppt intensity      0.00000000000000E+000     mm-1 H2O                 
+Flag: Project precip?     0.00000000000000E+000     none                     
+summer Ppt dev max        2.85351529900000E+000     mm H2O                   
+summer Ppt dev half sat   0.00000000000000E+000     year                     
+winter Ppt dev max        0.00000000000000E+000     mm H2O                   
+winter Ppt dev half sat   0.00000000000000E+000     year                     
+Days with precip          1.92000000000000E+002     days                     
+T winter slope            0.00000000000000E+000     oC yr-1                  
+T spring slope            0.00000000000000E+000     oC yr-1                  
+T summer slope            0.00000000000000E+000     oC yr-1                  
+T fall   slope            0.00000000000000E+000     oC yr-1                  
+T winter half sat         0.00000000000000E+000     days                     
+T spring half sat         0.00000000000000E+000     days                     
+T summer half sat         0.00000000000000E+000     days                     
+T fall   half sat         0.00000000000000E+000     days                     
+calib Tave                1.22622832400000E+001     oC                       
+fire interval             0.00000000000000E+000     yrs                      
+day of fire               0.00000000000000E+000     Julian day               
+fire leaf biomass loss    0.00000000000000E+000     fraction                 
+fire woody biomass loss   0.00000000000000E+000     fraction                 
+fire woody debris loss    0.00000000000000E+000     fraction                 
+fire Phase I soil loss    0.00000000000000E+000     fraction                 
+fraction FBN volatilized  0.00000000000000E+000     fraction                 
+fraction FBP volatilized  0.00000000000000E+000     fraction                 
+fraction FWN volatilized  0.00000000000000E+000     fraction                 
+fraction FWP volatilized  0.00000000000000E+000     fraction                 
+fraction FDN volatilized  0.00000000000000E+000     fraction                 
+fraction FDP volatilized  0.00000000000000E+000     fraction                 
+specif dead leaf area     0.00000000000000E+000     m2 gDW                   
+Total Residual            999                      
