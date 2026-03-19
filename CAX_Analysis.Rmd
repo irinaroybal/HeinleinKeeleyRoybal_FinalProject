@@ -1,0 +1,19 @@
+---
+title: "CAX_Analysis"
+author: "Jordan Heinlein"
+date: "2026-03-19"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Setup 
+```{r}
+library(here);library(tidyverse)
+
+
+
+```
+
