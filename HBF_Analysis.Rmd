@@ -12,29 +12,41 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(here)
 library(ggplot2)
+library(dplyr)
 ```
 
 
 ```{r}
-# bring in datasets for Jul 31 
+# bring in datasets for Jul 31 and filter for biomassC by Time
+
 HBF_1yr <- read.csv(here("HBF/HBF.1yr.out"), stringsAsFactors = TRUE) # 1 year steady state run, daily output
+HBF_1yr_biomassC <- HBF_1yr %>% select(Time, biomassC) 
 
 HBF_Ca_Jul31 <- read.csv(here("HBF/HBF.Ca.Jul31.out"), stringsAsFactors = TRUE) # doubling of CO2
+HBF_Ca_Jul31_biomassC <- HBF_Ca_Jul31 %>% select(Time, biomassC)
 
-HBF_Calld_Jul31 <- read.csv(here("HBF/HBF.Calld.Jul31.out"), stringsAsFactors = TRUE) # combined doubling of CO2, 3.5oC warming, and 20% decrease in precipitation	
+HBF_Calld_Jul31 <- read.csv(here("HBF/HBF.Calld.Jul31.out"), stringsAsFactors = TRUE) # combined doubling of CO2, 3.5oC warming, and 20% decrease in precipitation
+HBF_Calld_Jul31_biomassC <- HBF_Calld_Jul31 %>% select(Time, biomassC)
 
 HBF_Calli_Jul31 <- read.csv(here("HBF/HBF.Calli.Jul31.out"), stringsAsFactors = TRUE) # combined doubling of CO2, 3.5oC warming, and 20% increase in precipitation
+HBF_Calli_Jul31_biomassC <- HBF_Calli_Jul31 %>% select(Time, biomassC)
 
 HBF_Pptd_Jul31 <- read.csv(here("HBF/HBF.Pptd.Jul31.out"), stringsAsFactors = TRUE) # 20% decrease in precipitation	
+HBF_Pptd_Jul31_biomassC <- HBF_Pptd_Jul31 %>% select(Time, biomassC)
 
 HBF_Ppti_Jul31 <- read.csv(here("HBF/HBF.Ppti.Jul31.out"), stringsAsFactors = TRUE) # 20% increase in precipitation
+HBF_Ppti_Jul31_biomassC <- HBF_Ppti_Jul31 %>% select(Time, biomassC)
 
 HBF_T_Jul31 <- read.csv(here("HBF/HBF.T.Jul31.out"), stringsAsFactors = TRUE) # 3.5degreesC warming
+HBF_T_Jul31_biomassC <- HBF_T_Jul31 %>% select(Time, biomassC)
 ```
 
 ```{r}
 # combine into one data frame
-HBF_alltreat <- 
+list_treats <- list(HBF_Ca_Jul31_biomassC, HBF_Calld_Jul31_biomassC, HBF_Calli_Jul31_biomassC, HBF_Pptd_Jul31_biomassC, HBF_Ppti_Jul31_biomassC, HBF_T_Jul31_biomassC)
+
+HBF_alltreats <- Reduce(list_treats, left_join)
+
 ```
 
 
