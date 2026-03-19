@@ -2,7 +2,9 @@
 title: "HBF_Analysis"
 author: "Elizabeth Keeley"
 date: "2026-03-18"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -76,6 +78,10 @@ HBF_figure<-ggplot(HBF_alltreats, aes(x = Time_yrs)) +
 
 HBF_figure
   
+```
+```{r}
+# export figure
+ggsave("HBF_expl_fig.png", plot = HBF_figure)
 ```
  
 
