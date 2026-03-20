@@ -3,10 +3,12 @@ title: "CAX_Analysis"
 author: "Jordan Heinlein"
 date: "2026-03-19"
 output: pdf_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE); library(viridis)
 ```
 
 # Setup 
@@ -14,6 +16,48 @@ knitr::opts_chunk$set(echo = TRUE)
 library(here);library(tidyverse)
 
 
+CAX_Ca_Jul31 <- read.csv(here("Data/CAX/CAX.Ca.Jul31[1].out"), stringsAsFactors = TRUE) %>% 
+  select(biomassC) %>% 
+  mutate(Treatment = "Ca")
 
+CAX_Calld_Jul31 <- read.csv(here("Data/CAX/CAX.Calld.Jul31[1].out"), stringsAsFactors = TRUE) %>% 
+  select(biomassC) %>% 
+  mutate(Treatment = "Calld")
+
+CAX_Calli_Jul31 <- read.csv(here("Data/CAX/CAX.Calli.Jul31[1].out"), stringsAsFactors = TRUE) %>% 
+  select(biomassC) %>% 
+  mutate(Treatment = "Calli")
+
+CAX_Pptd_Jul31 <- read.csv(here("Data/CAX/CAX.Pptd.Jul31[1].out"), stringsAsFactors = TRUE) %>% 
+  select(biomassC) %>% 
+  mutate(Treatment = "Pptd")
+
+CAX_Ppti_Jul31 <- read.csv(here("Data/CAX/CAX.Ppti.Jul31.out"), stringsAsFactors = TRUE) %>% 
+  select(biomassC) %>% 
+  mutate(Treatment = "Ppti")
+
+CAX_T_Jul31 <- read.csv(here("Data/CAX/CAX.T.Jul31[1].out"), stringsAsFactors = TRUE) %>% 
+  select(biomassC) %>% 
+  mutate(Treatment = "T")
+
+CAX_combined <- bind_rows(CAX_Ca_Jul31,
+                          CAX_Calld_Jul31,
+                          CAX_Calli_Jul31,
+                          CAX_Pptd_Jul31,
+                          CAX_Ppti_Jul31,
+                          CAX_T_Jul31)
+
+CAX_biommasC_dist <- ggplot(data = CAX_combined, aes(x= Treatment, y= biomassC, fill = Treatment))+
+  geom_violin(width= 1)+
+  geom_boxplot(width= 0.1, color = "white", alpha= 0.2)+
+  scale_fill_viridis(discrete = TRUE)+
+  theme_bw()+
+  labs(y= "Vegetation Carbon Biomass (g/m2)",
+       title = "Carbon Biomass Accumulation over 100 years by Treatment Type",
+       subtitle = "Caxiuana National Tropical Rainforest, Para, Brazil",
+       caption="Ca: Doubling of atmospheric CO2.\nCalld: CO2 doubling, 3.5 degrees Celsius warming, and 20% decrease in precipitation.\nCalli: CO2 doubling, 3.5 degrees Celsius warming, and 20% increase in precipitation.\nPptd: 20% decrease in precipitation.\nPPti: 20% increase in precipitation.\nT:3.5 degrees Celsius warming.")+
+  theme(plot.caption = element_text( hjust = 0))
+  
+print(CAX_biommasC_dist)
 ```
 
