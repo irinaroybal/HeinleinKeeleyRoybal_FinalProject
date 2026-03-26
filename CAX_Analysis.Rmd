@@ -61,3 +61,32 @@ CAX_biommasC_dist <- ggplot(data = CAX_combined, aes(x= Treatment, y= biomassC, 
 print(CAX_biommasC_dist)
 ```
 
+**Make line graph exploratory figure**
+```{r}
+# add time column to each of the treatment types
+CAX_Ca_Jul31$Time <- as.numeric(rownames(CAX_Ca_Jul31))
+
+# combine all treatments types wiht time (note that we start at time 1 here because I got lazy, where we start at time year =0.58 in the Hubbard Brook line graph)
+CAX_line_comb <-  bind_cols(Time=CAX_Ca_Jul31$Time, Ca_biomassC= CAX_Ca_Jul31$biomassC, Calld_biomassC=CAX_Calld_Jul31$biomassC, Calli_biomassC = CAX_Calli_Jul31$biomassC, Pptd_biomassC = CAX_Pptd_Jul31$biomassC, Ppti_biomassC = CAX_Ppti_Jul31$biomassC, T_biomassC = CAX_T_Jul31$biomassC)
+```
+
+```{r}
+
+# make the figure
+CAX_line_fig <- ggplot(CAX_line_comb, aes(x = Time)) +
+  geom_line(aes(y = Ca_biomassC, color = "Ca")) +
+  geom_line(aes(y = Calld_biomassC, color = "Calld")) +
+  geom_line(aes(y = Calli_biomassC, color = "Calli")) +
+  geom_line(aes(y = Pptd_biomassC, color = "Pptd")) +
+  geom_line(aes(y = Ppti_biomassC, color = "Ppti")) +
+  geom_line(aes(y = T_biomassC, color = "T")) +
+  theme_bw()+
+  labs(x="Time (years)",y="Carbon Biomass (g/m2)", title="Change in Carbon Biomass Accumulation over 100 years by Treatment Type", subtitle="Caxiuana National Tropical Rainforest, Para, Brazil", colour="Treatment Type", caption="Ca: Doubling of atmospheric CO2.\nCalld: CO2 doubling, 3.5 degrees Celsius warming, and 20% decrease in precipitation.\nCalli: CO2 doubling, 3.5 degrees Celsius warming, and 20% increase in precipitation.\nPptd: 20% decrease in precipitation.\nPPti: 20% increase in precipitation.\nT:3.5 degrees Celsius warming.")+
+  theme(plot.caption = element_text( hjust = 0))
+
+print(CAX_line_fig)
+
+#export
+ggsave("CAX_line_fig.png", plot = CAX_line_fig)
+```
+
