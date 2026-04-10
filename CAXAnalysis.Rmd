@@ -1,0 +1,209 @@
+---
+title: "CAX Analysis"
+output: html_document
+date: "2026-04-08"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE); library(viridis)
+library(ggplot2)
+library(dplyr)
+```
+
+# Setting Up
+
+```{r}
+library(readr)
+CAX_treatments_combined<- read_csv("CAX_treatments_combined.csv")
+View(CAX_treatments_combined)
+```
+
+## Variable Exploration
+
+```{r}
+# Create and examine histograms of raw values.
+
+#Total Soil Nitrogen
+histTotalSoilN <- ggplot(CAX_treatments_combined, aes(x = TotalSoilN)) +
+geom_histogram() +
+theme_bw()
+
+plot(histTotalSoilN)
+
+#Leaf Area
+histleafArea <- ggplot(CAX_treatments_combined, aes(x = leafArea)) +
+geom_histogram() +
+theme_bw()
+
+plot(histleafArea)
+
+#Biomass Carbon
+histbiomassC <- ggplot(CAX_treatments_combined, aes(x = biomassC)) +
+geom_histogram() +
+theme_bw()
+
+plot(histbiomassC)
+
+#VPD
+histVPD <- ggplot(CAX_treatments_combined, aes(x = VPD)) +
+geom_histogram() +
+theme_bw()
+
+plot(histVPD)
+```
+
+## Scatter Plot Examination
+
+```{r}
+scatter1 <- ggplot(CAX_treatments_combined, aes(x = TotalSoilN,
+y = leafArea)) +
+geom_point() +
+theme_bw()
+
+plot(scatter1)
+
+scatter2 <- ggplot(CAX_treatments_combined, aes(x = TotalSoilN,
+y = biomassC)) +
+geom_point() +
+theme_bw()
+
+plot(scatter2)
+
+
+scatter3 <- ggplot(CAX_treatments_combined, aes(x = TotalSoilN,
+y = VPD)) +
+geom_point() +
+theme_bw()
+
+plot(scatter3)
+
+
+scatter4 <- ggplot(CAX_treatments_combined, aes(x = leafArea,
+y = biomassC)) +
+geom_point() +
+theme_bw()
+
+plot(scatter4)
+
+scatter5 <- ggplot(CAX_treatments_combined, aes(x = leafArea,
+y = VPD)) +
+geom_point() +
+theme_bw()
+
+plot(scatter5)
+
+scatter6 <- ggplot(CAX_treatments_combined, aes(x = VPD,
+y = biomassC)) +
+geom_point() +
+theme_bw()
+
+plot(scatter6)
+```
+
+## Log Transforming Data
+
+```{r}
+
+# Create a new dataframe with specific log columns
+log_CAX <- CAX_treatments_combined %>%
+  mutate(across(c(TotalSoilN, leafArea, biomassC, VPD), log10 , .names = "log_{.col}"))
+
+#Total Soil Nitrogen
+
+log_histTotalSoilN <- ggplot(log_CAX, aes(x = log_TotalSoilN)) +
+geom_histogram() +
+theme_bw()
+
+plot(log_histTotalSoilN)
+
+#Leaf Area
+log_histleafArea <- ggplot(log_CAX, aes(x = log_leafArea)) +
+geom_histogram() +
+theme_bw()
+
+plot(log_histleafArea)
+
+#Biomass Carbon
+log_histbiomassC <- ggplot(log_CAX, aes(x = log_biomassC)) +
+geom_histogram() +
+theme_bw()
+
+plot(log_histbiomassC)
+
+#VPD
+log_histVPD <- ggplot(log_CAX, aes(x = log_VPD)) +
+geom_histogram() +
+theme_bw()
+
+plot(log_histVPD)
+```
+## Correlation Test
+
+```{r}
+#Determining correlation between variables.
+
+cor.test(log_CAX$log_TotalSoilN, log_CAX$log_leafArea)
+
+cor.test(log_CAX$log_TotalSoilN, log_CAX$log_VPD)
+
+cor.test(log_CAX$log_TotalSoilN, log_CAX$log_biomassC)
+
+cor.test(log_CAX$log_VPD, log_CAX$log_biomassC)
+
+cor.test(log_CAX$log_VPD, log_CAX$log_leafArea)
+
+cor.test(log_CAX$log_leafArea, log_CAX$log_biomassC)
+```
+
+```{r}
+GrwSeas_Y <- log_CAX[log_CAX$GrwSeas == "Y", ]
+GrwSeas_N <- log_CAX[log_CAX$GrwSeas == "N", ]
+
+GrwSeas_Y$treatment <- factor(GrwSeas_Y$treatment, levels = c("Ca", "Calld", "Calli", "Pptd", "Ppti", "T"))
+GrwSeas_N$treatment <- factor(GrwSeas_N$treatment, levels = c("Ca", "Calld", "Calli", "Pptd", "Ppti", "T"))
+```
+
+# Model 1
+
+```{r}
+CAX.glm1 <- glm(log_biomassC ~ log_leafArea + log_VPD + log_TotalSoilN + treatment + Time, data = GrwSeas_Y, family = gaussian)
+
+summary(CAX.glm1)
+
+plot(CAX.glm1)
+```
+# Model 2
+```{r}
+CAX.glm2 <- glm(log_biomassC ~ log_leafArea + log_VPD + log_TotalSoilN + treatment + Time, data = GrwSeas_N, family = gaussian)
+
+summary(CAX.glm2)
+
+plot(CAX.glm2)
+```
+```{r}
+#not transformed, growing season Yes
+CAX.glm3 <- glm(biomassC ~ leafArea + VPD + TotalSoilN + Time, data = GrwSeas_Y, family = gaussian)
+
+summary(CAX.glm3)
+
+plot(CAX.glm3)
+```
+```{r}
+#not transformed, growing season No
+CAX.glm4 <- glm(biomassC ~ leafArea + VPD + TotalSoilN + Time, data = GrwSeas_N, family = gaussian)
+
+summary(CAX.glm4)
+
+plot(CAX.glm4)
+```
+
+```{r}
+log_CAX$GrwSeas <-  factor(log_CAX$GrwSeas, levels = c("Y","N"))
+                           
+CAX.glm5 <- glm(biomassC ~ leafArea + VPD + TotalSoilN + Time + treatment + GrwSeas, data = log_CAX, family = gaussian)
+
+summary(CAX.glm5)
+
+plot(CAX.glm5)
+```
+
